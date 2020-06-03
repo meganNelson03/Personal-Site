@@ -1,0 +1,200 @@
+body {
+  /* background: rgb(2,1,6); */
+  background: #342b38;
+  font-family: "Montserrat", sans-serif;
+  /* background-image: url("./imgs/blob.svg"); */
+  /* background: linear-gradient(180deg, rgba(2,1,6,1) 0%, rgba(7,7,28,1) 50%, rgba(1,10,38,1) 100%); */
+}
+
+span {
+  /* color: #ff9595; */
+  color: #ff9595;
+  font-weight: 700;
+
+}
+
+h1, h3 {
+  font-size: 3rem;
+  line-height: 2;
+  font-family: "Lexend Tera";
+  text-shadow: -1px 2px 8px rgba(33,27,35,1);
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/*** CANVAS STYLES ****/
+
+#myCanvas {
+  width: calc(100vw);
+  height: calc(100vh);
+}
+
+.background-image {
+  position: absolute;
+  color: #403445;
+  opacity: 0.5;
+  z-index: 0;
+  width: 100%;
+  height: calc(100vh);
+  left: 0;
+  top: 5%;
+
+}
+
+
+/********* NAVIGATION **********/
+
+nav {
+  position: static;
+  z-index: 1;
+}
+
+.navbar {
+  padding: .75% 5%;
+}
+
+
+.nav-link {
+  letter-spacing: 4px;
+
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ff9595;
+}
+
+
+/***** HEADER SECTION *****/
+
+.header-section {
+  background-color: #342b38;
+  font-family: "Lexend Terra", "Montserrat";
+  color: white;
+  text-align: center;
+  padding: 15% 7%;
+  width: 100%;
+  height: calc(100vh);
+}
+
+.canvas-container {
+
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.header-text {
+  line-height: 2;
+  position: relative;
+}
+
+.header-text .btn {
+
+  border: 2px solid #80bdab;
+  margin-top: 2%;
+  background-color: #342b38;
+  color: #80bdab;
+  padding: 1% 2%;
+  font-weight: bold;
+
+
+}
+
+.header-text .btn:hover {
+
+  background-color: #80dbab;
+  color: #342b38;
+
+}
+
+
+.animated {
+  animation-name: arrowAnimate;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrowAnimate {
+
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+
+}
+
+
+/*********************/
+
+.container-fluid {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 7% 15%;
+}
+
+/**** RESPONSIVE RESIZING *******/
+
+
+@media (max-width: 700px) {
+  .header {
+    padding-top: 35%;
+  }
+
+  #myNavbar {
+      position: absolute;
+      width: 100%;
+      z-index: 9999;
+  }
+
+  h1 {
+    line-height: 1.5;
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+}
+
+@media (min-width: 750px) and (max-width: 990px) {
+
+  nav.navbar {
+    padding-top: 3%;
+  }
+
+  #myNavbar {
+      position: absolute;
+      width: 100%;
+      z-index: 9999;
+  }
+
+  .header {
+      padding-top: 15%;
+      padding-left: 15%;
+      padding-right: 15%;
+  }
+
+  h1 {
+    line-height: 1.5;
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+}
