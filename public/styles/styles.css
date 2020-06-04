@@ -1,27 +1,47 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /* background: rgb(2,1,6); */
   background: #342b38;
   font-family: "Montserrat", sans-serif;
-  /* background-image: url("./imgs/blob.svg"); */
-  /* background: linear-gradient(180deg, rgba(2,1,6,1) 0%, rgba(7,7,28,1) 50%, rgba(1,10,38,1) 100%); */
 }
 
-span {
-  /* color: #ff9595; */
+h2, h3, h4, h5, h6 {
+  font-family: "Lexend Tera";
+}
+
+p {
+    line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+.header-section span {
   color: #ff9595;
   font-weight: 700;
-
 }
 
-h1, h3 {
+.header-text h1, .header-text h3 {
   font-size: 3rem;
   line-height: 2;
   font-family: "Lexend Tera";
   text-shadow: -1px 2px 8px rgba(33,27,35,1);
 }
 
-h3 {
+.header-text h3 {
   font-size: 2rem;
+}
+
+/***** SECTION STYLING *****/
+
+.container-fluid {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 7% 15%;
 }
 
 /*** CANVAS STYLES ****/
@@ -46,18 +66,27 @@ h3 {
 
 /********* NAVIGATION **********/
 
+#myNavbar .navbar-dark {
+  background-color: "black";
+}
+
 nav {
-  position: static;
+  position: fixed;
+  top: 0;
   z-index: 1;
 }
 
 .navbar {
+  position: fixed;
   padding: .75% 5%;
+  background-color: "black";
+
 }
 
 
 .nav-link {
   letter-spacing: 4px;
+  text-transform: uppercase;
 
 }
 
@@ -70,6 +99,26 @@ nav {
   color: #ff9595;
 }
 
+#myNavbar:scroll {
+  border: 1px solid red;
+  animation-name: makeOpaque;
+  animation-duration: 1s;
+}
+
+@keyframes makeOpaque {
+
+  from {
+    background-color: none;
+  }
+
+  to {
+    background-color: #342b38;
+  }
+
+
+}
+
+
 
 /***** HEADER SECTION *****/
 
@@ -81,6 +130,7 @@ nav {
   padding: 15% 7%;
   width: 100%;
   height: calc(100vh);
+  border-bottom: 5px solid #ff9595;
 }
 
 .canvas-container {
@@ -116,7 +166,6 @@ nav {
 
 }
 
-
 .animated {
   animation-name: arrowAnimate;
   animation-duration: .5s;
@@ -124,7 +173,6 @@ nav {
 }
 
 @keyframes arrowAnimate {
-
   from {
     transform: rotate(0);
   }
@@ -132,17 +180,47 @@ nav {
   to {
     transform: rotate(90deg);
   }
-
 }
 
+/********* ABOUT ME SECTION ************/
 
-/*********************/
+.about-section  h2 {
+  font-family: "Lexend Tera";
+  font-size: 2.5rem;
+  padding-bottom: 5%;
+}
 
-.container-fluid {
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  padding: 7% 15%;
+.about-section p {
+  line-height: 2;
+  color: rgba(0, 0, 0, .7);
+}
+
+/**** CV ******/
+
+.cv-section .container-fluid {
+  background-color: #342b38;
+  color: lightgray;
+}
+
+.cv-section h4 {
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #80bdab;
+}
+
+.cv-section hr {
+  background-color: #ff9595;
+}
+.cv-section p {
+  font-weight: bold;
+}
+
+.cv-section h2 {
+  padding-bottom: 4%;
+}
+
+.resume-section {
+  padding-bottom: 4%;
 }
 
 /**** RESPONSIVE RESIZING *******/
@@ -150,7 +228,7 @@ nav {
 
 @media (max-width: 700px) {
   .header {
-    padding-top: 35%;
+    padding-top: 30%;
   }
 
   #myNavbar {

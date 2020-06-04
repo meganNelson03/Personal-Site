@@ -7,10 +7,10 @@
     <!-- paper.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.7/paper-full.js" charset="utf-8"></script>
     <!-- my paper script -->
-    <script id="myScript" type="text/paperscript" src="./scripts/star3.js" canvas="myCanvas"></script>
+    <script id="myScript" type="text/paperscript" src="./scripts/star.js" canvas="myCanvas"></script>
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,7 +18,7 @@
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/ffc6eb7467.js" crossorigin="anonymous"></script>
 
-    <!-- jQuery --> 
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
     <!-- my css -->
@@ -42,36 +42,20 @@
         <div class="collapse navbar-collapse" id="navbarToggler01">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a id="blue" class="nav-link" href="www.google.com">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a id="blue" class="nav-link" href="www.google.com">Projects</a>
+              <a class="nav-link" href="#cv">CV</a>
             </li>
             <li class="nav-item">
-              <a id="blue" class="nav-link" href="www.google.com">Contact</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#pricing">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#cta">Download</a>
+              <a class="nav-link" href="#contactme">Contact Me</a>
             </li>
           </ul>
         </div>
       </nav>
-
-    </section>
-
-    <!-- BACKGROUND SECTION -->
-
-    <section class="background-section">
-
-      <!-- <div class="header-background-image">
-        <img class="background-image" src="./imgs/blob2.svg" alt="blob img">
-        <img class="background-image" src="./imgs/blob.svg" alt="blob img">
-      </div> -->
-
-
 
     </section>
 
@@ -84,7 +68,6 @@
 
       <div class="header-background-image">
         <img class="background-image" src="./imgs/blob.svg" alt="blob img">
-        <!-- <img class="background-image" src="./imgs/blob.svg" alt="blob img"> -->
       </div>
 
       <div class="row">
@@ -92,22 +75,166 @@
           <div class="header-text">
             <h1>Hi, I'm <span>Megan Nelson</span></h1>
             <h3>a programmer</h3>
-            <button class="btn btn-lg btn-dark" type="button" name="button">About <i class="fas fa-arrow-right"></i></button>
+            <button class="btn btn-lg btn-dark" type="button" href="#about" name="button">About <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
       </div>
 
     </section>
 
-    <section class="content-section">
+    <!-- ABOUT ME -->
+
+    <section class="about-section" id="about">
 
       <div class="container-fluid">
         <div class="col">
           <div class="row">
-            <h3>hello</h3>
+            <h2>ABOUT ME</h2>
+            <hr>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
           </div>
         </div>
       </div>
+
+    </section>
+
+    <!-- CV -->
+
+    <section class="cv-section">
+
+
+
+      <div class="container-fluid">
+        <div class="row">
+          <h2>Megan Nelson</h2>
+        </div>
+        <div class="row">
+              <div class="col-lg-8 resume-section">
+                <h3>Education</h3>
+                <hr>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h4>B.A. in Political Science and Computer Science </h4>
+                    <div class="row">
+                      <div class="col-lg-9">
+                        <p>Vassar College<p>
+                        <p>Poughkeepsie, New York</p>
+                        <ul>
+                          <li>Overall GPA: 3.28 / 4.00, Major GPA: 3.85 / 4.00 </li>
+                          <li>Relevant Coursework</li>
+                          <li></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h4>The 2020 Web Developer Full-Stack Bootcamp</h4>
+                    <p>Udemy.com</p>
+                    <ul>
+                      <li>Front-End</li>
+                      <li>Back-End</li>
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 resume-section">
+                  <h3>Skills</h3>
+                  <hr>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+        </div>
+
+        <!-- EXPERIENCES ROW -->
+
+        <div class="resume-section">
+        <div class="row">
+          <div class="col-lg-12">
+              <h3>Experience</h3>
+              <hr>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="">
+              <h4>Freelance Writing</h4>
+              <p>TextBroker, Inc.</p>
+              <p>Christchurch, New Zealand</p>
+              <ul>
+                <li>Crafted hundreds of articles, technical papers, teaching materials, and press releases based on client specification</li>
+                <li>Expressed knowledge concerning software, web development, UX design, and business intelligence</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+
+          </div>
+        </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 resume-section">
+            <h3>Activities</h3>
+            <hr>
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PORTFOLIO -->
+
+    <section class="portfolio-section">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="">
+
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- CONTACT ME -->
+
+    <section class="contact-section" id="contactme">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <form action="/" method="post">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" placeholder="name">
+              <label for="email">Your Email</label>
+              <input type="text" name="email" value="" placeholder="email">
+              <label for="message">Your Message</label>
+              <input type="textarea">
+              <button class="btn btn-lg btn-dark" type="submit" name="button">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
 
 
     </section>

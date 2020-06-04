@@ -1,101 +1,113 @@
-var stars = [];
-var deltax = 1;
-var deltay = 1;
+// initial mouse position
 var mousePosition = view.center;
 
-generateStars(50);
+generateAndPlaceItems(100);
+generateUniqueItem(10, "#80bdab", 15);
+generateUniqueItem(10, "#ff9595", 7);
+
+var star = new Path.Star(new Point(50, 50), 5, 2);
+star.fillColor = "aquamarine";
 
 function onFrame(event) {
+  for (var i = 0; i < project.activeLayer.children.length ; i++) {
+      moveItem(project.activeLayer.children[i], 0.1);
+      circulateItem(project.activeLayer.children[i]);
+  }
+}
 
-  for (var i = 0 ; i < stars.length ; i++) {
-         reactToMouse(stars[i], 1, 1, 0.008);
-         stars[i].position.x += deltax;
-         stars[i].position.y += deltay;
-         // twinkle(stars[i]);
-         stars[i].rotate(0.3);
-         keepItemInView(stars[i]);
+view.onMouseMove = function(event) {
+    mousePosition = event.point;
+}
+
+view.onScroll = function(event) {
+
+  console.log("yeehaw");
+}
+
+window.onresize = function(event) {
+  // regenerate items every time screen size changes
+  project.activeLayer.children = [];
+  generateAndPlaceItems(100);
+  generateUniqueItem(10, "#80bdab", 15);
+  generateUniqueItem(10, "#ff9595", 10);
+}
+
+
+function generateAndPlaceItems(itemCount) {
+
+    var radius = 7;
+    var item = new Path.Star(new Point(0, 0), radius, radius/2);
+    item.fillColor = "white";
+    item.strokeColor = "white";
+
+
+    var itemSymbol = new Symbol(item);
+
+    for (var i = 0 ; i < itemCount ; i++) {
+
+        var randomPlace = Point.random() * view.size;
+        var placedItem = itemSymbol.place(randomPlace);
+        placedItem.scale((i / itemCount) + .03);
+
+    }
+
+
+
+}
+
+function generateUniqueItem(count, color, radius) {
+
+  for (var i = 0; i < count ; i++) {
+    var uniqueItem = new Path.Star(new Point(Point.random() * view.size), radius, radius/2);
+    uniqueItem.fillColor = color;
+    uniqueItem.strokeColor = color;
+
   }
 
 }
 
-view.onMouseMove = function(event){
-   mousePosition = event.point;
-}
+function moveItem(item, vector) {
 
-stars.forEach(function(star) {
-  star.onMouseMove = function(event) {
-    star.opacity = 1;
-    star.fillColor = "aquamarine";
-  }
-});
+  var posDifference = mousePosition - view.center;
 
-function generateStars(count) {
+  var speed = (posDifference * vector)/100;
 
-    for (var i = 0; i < count; i++) {
-        var center = new Point(Math.random() * view.bounds.width, Math.random() * view.bounds.height);
-        var points = Math.floor(Math.random() * 5) + 5;
-        var radius1 = 4 - ((i + (count * 2))/count);
-        var radius2 =  10;
-        var star = new Path.Star(center, points, radius1, radius2);
-        star.fillColor = "white";
+  item.bounds.x -= item.bounds.width * speed.x;
 
-        stars.push(star);
-    }
+  item.bounds.y -= item.bounds.width * speed.y;
+
 
 }
 
-function reactToMouse(item, deltaX, deltaY, speedFactor) {
+function circulateItem(item) {
+    // keep items in view
 
-    var viewDifferenceX = Math.abs(mousePosition.x - view.center.x);
-    var viewDifferenceY = Math.abs(mousePosition.y - view.center.y);
-
-    if (viewDifferenceX < 200 && viewDifferenceY < 200) {
-        deltax = viewDifferenceX * (speedFactor / 1);
-        deltay = viewDifferenceY * (speedFactor / 1);
-        return;
+    if (item.position.x >= view.bounds.width) {
+        item.position.x = item.bounds.width + 5;
     }
 
-    var differenceX = Math.abs(mousePosition.x - view.center.y);
-    var differenceY = Math.abs(mousePosition.y - view.center.y);
-
-    if (mousePosition.x < view.center.x) {
-        deltax = deltaX + (differenceX * speedFactor);
-
+    if (item.position.x <= item.bounds.width) {
+        item.position.x = view.bounds.width - 5;
     }
 
-    if (mousePosition.x > view.center.x) {
-        deltax = -deltaX - (differenceX * speedFactor);
+    if (item.position.y >= view.bounds.height) {
+        item.position.y = item.bounds.height;
     }
 
-    if (mousePosition.y > view.center.y) {
-        deltay = -deltaY - (differenceY * speedFactor);
+    if (item.position.y <= item.bounds.height - 5) {
+        item.position.y = view.bounds.height;
     }
 
-    if (mousePosition.y < view.center.y) {
-        deltay = deltaY + (differenceY * speedFactor);
-    }
 
 }
+
+// function spaceOut(items) {
+//
+//   for (var i = 0; i < items.length ; i ++) {
 //
 //
-function keepItemInView(item) {
-
-    var position = item.position;
-
-    if (position.x >= view.bounds.width ) {
-        position.x = item.bounds.width + 5;
-    }
-
-    if (position.x <= item.bounds.width) {
-        position.x = view.bounds.width - item.bounds.width;
-    }
-
-    if (position.y >= view.bounds.height) {
-        position.y = item.bounds.height * 2;
-    }
-
-    if (position.y <= item.bounds.height) {
-        position.y = view.bounds.height - item.bounds.height;
-    }
-
-}
+//
+//   }
+//
+//
+// }
