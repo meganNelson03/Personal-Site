@@ -7,32 +7,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Lexend Tera";
-}
-
-p {
-    line-height: 1;
 }
 
 ul {
   list-style: none;
-}
-
-.header-section span {
-  color: #ff9595;
-  font-weight: 700;
-}
-
-.header-text h1, .header-text h3 {
-  font-size: 3rem;
-  line-height: 2;
-  font-family: "Lexend Tera";
-  text-shadow: -1px 2px 8px rgba(33,27,35,1);
-}
-
-.header-text h3 {
-  font-size: 2rem;
 }
 
 /***** SECTION STYLING *****/
@@ -69,8 +49,12 @@ ul {
 
 .navbar {
   width: 100%;
+  position: fixed;
+  padding: .75% 5%;
+  z-index: 99;
 
 }
+
 .scrolled {
     background-color: #342b38;
     box-shadow: 2px 2px 5px rgba(33,27,35, 0.3);
@@ -80,19 +64,6 @@ ul {
 .unscrolled {
   background-color: none;
   transition: background-color 1000ms;
-
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  z-index: 99;
-}
-
-.navbar {
-  position: fixed;
-  padding: .75% 5%;
-  background-color: "black";
 
 }
 
@@ -140,6 +111,27 @@ nav {
   border-bottom: 5px solid #ff9595;
 }
 
+.header-text {
+  line-height: 2;
+  position: relative;
+}
+
+.header-text h1, .header-text h3 {
+  font-size: 3rem;
+  line-height: 2;
+  font-family: "Lexend Tera";
+  text-shadow: -1px 2px 8px rgba(33,27,35,1);
+}
+
+.header-text h3 {
+  font-size: 2rem;
+}
+
+.header-section span {
+  color: #ff9595;
+  font-weight: 700;
+}
+
 .canvas-container {
 
   height: 100%;
@@ -149,10 +141,7 @@ nav {
 
 }
 
-.header-text {
-  line-height: 2;
-  position: relative;
-}
+
 
 .header-text .btn {
 
@@ -161,7 +150,7 @@ nav {
   background-color: #342b38;
   color: #80bdab;
   padding: 1% 2%;
-  font-weight: bold;
+  border-radius: 0px;
 
 
 }
@@ -213,30 +202,52 @@ nav {
 
 /**** CV ******/
 
-.cv-section .container-fluid {
 
-}
-
-
-.cv-section h4 {
-  font-family: "Montserrat";
-  font-weight: 700;
+.cv-header {
+  text-align: center;
+  padding-bottom: 4%;
 }
 
 .cv-section hr {
-
+  padding: 2%;
 }
-.cv-section p {
-  font-weight: bold;
+
+.col-lg-7, .col-lg-12 {
+  padding-left: 0;
+}
+
+.cv-section h3 {
+  padding-bottom: 2%;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.cv-section h4 {
+  font-family: "Montserrat";
+  font-weight: 500;
+
 }
 
 .cv-section h2 {
-  padding-bottom: 4%;
+  font-size: 2.25rem;
+}
+
+.cv-section p {
+  margin: 0;
+}
+
+.cv-section ul {
+  padding-top: 1%;
 }
 
 .cv-section li {
   font-size: .9rem;
   line-height: 2;
+  padding-bottom: .5%;
+}
+
+.cv-section .fab:hover {
+  color: #80bdab;
 }
 
 .cv-section .work-date {
@@ -246,11 +257,11 @@ nav {
 
 .work-experience {
   padding-bottom: 2%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.resume-section {
-
-}
 
 /****** CONTACT ME *******/
 
@@ -282,7 +293,7 @@ nav {
   background-color: #342b38;
   color: #80bdab;
   padding: 1% 2%;
-  font-weight: bold;
+
   border-radius: 0px;
 
 }

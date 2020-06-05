@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Art</title>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Montserrat:wght@300;400;500;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="../styles/art.css">
+
+  </head>
+  <body>
+
+    <!-- ART SECTION -->
+
+    <section class="art-section">
+      <div class="container-fluid">
+        <% pieces.forEach((piece) => { %>
+
+          <p><%= piece.name %></p>
+
+        <% }) %>
+      </div>
+    </section>
+
+
+
+
+
+    <h1>hello!</h1>
+
+  </body>
+</html>

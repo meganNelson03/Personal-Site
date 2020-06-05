@@ -1,0 +1,12 @@
+body {
+  background-color: #342b38;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+
+/******GENERAL STYLES*****/
+
+.container-fluid {
+  padding: 7% 15%;
+}
