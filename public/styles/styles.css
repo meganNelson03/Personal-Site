@@ -41,7 +41,6 @@ ul {
   height: calc(100vh);
   left: 0;
   top: 5%;
-
 }
 
 
@@ -52,13 +51,12 @@ ul {
   position: fixed;
   padding: .75% 5%;
   z-index: 99;
-
 }
 
 .scrolled {
     background-color: #342b38;
     box-shadow: 2px 2px 5px rgba(33,27,35, 0.3);
-    transition: background-color border 1000ms 1000ms;
+    transition: background-color 1000ms;
 }
 
 .unscrolled {
@@ -66,7 +64,6 @@ ul {
   transition: background-color 1000ms;
 
 }
-
 
 .nav-link {
   letter-spacing: 4px;
@@ -242,8 +239,8 @@ ul {
 
 .cv-section li {
   font-size: .9rem;
-  line-height: 2;
-  padding-bottom: .5%;
+  line-height: 1.5;
+  padding-bottom: 2%;
 }
 
 .cv-section .fab:hover {
@@ -299,7 +296,7 @@ ul {
 }
 
 .contact-section .btn:hover {
-  background-color: #bbf1c8;
+  background-color: #80bdab;
   color: #342b38;
   animation: btn-animate 1s forwards;
 }

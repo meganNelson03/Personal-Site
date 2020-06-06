@@ -4,9 +4,96 @@ body {
   color: white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lexend Tera", sans-serif;
+}
 
 /******GENERAL STYLES*****/
 
 .container-fluid {
-  padding: 7% 15%;
+  padding: 7% 3%;
+}
+
+/**** HEADER SECTION ******/
+
+.header-section {
+  text-align: center;
+  background-color: #342b38;
+}
+
+.header-section .container-fluid {
+  padding-bottom: 0%;
+}
+
+.header-section hr {
+  background-color: white;
+  width: 50%;
+  height: 5px;
+}
+
+.navbar {
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ff9595;
+}
+
+.nav-link {
+  letter-spacing: 2px;
+}
+
+/***** ART SECTION *******/
+
+.art-section {
+
+}
+
+.piece-image {
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+  padding: 4%;
+}
+
+.piece-image img {
+  width: 100%;
+  box-shadow: 5px 5px 5px 0px #1f1921;
+}
+
+
+.grid {
+  width: 100%;
+}
+
+.grid-item {
+  float: left;
+  width: 33.3%;
+}
+
+/***** FOOTER *******/
+
+.footer-section {
+  background-color: #241d26;
+  text-align: center;
+}
+
+.footer-section p {
+  color: #4d3d52;
+  opacity: 1;
+  margin: 0 auto;
+}
+
+@media (max-width: 990px) {
+
+  .grid-item {
+    width: 50%;
+  }
+
+  @media (max-width: 700px) {
+
+    .grid-item {
+      width: 100%;
+    }
+  }
+
 }
