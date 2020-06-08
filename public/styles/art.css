@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   object-fit: contain;
   height: auto;
-  padding: 4%;
+  padding: 2%;
 }
 
 .piece-image img {
@@ -71,9 +71,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .grid-item {
-  float: left;
-  width: 33.3%;
+  width: 33.33%;
 }
+
+
+/* .grid-item--width2 {
+  float: left;
+  width: 25%;
+}
+
+.grid-item--width-big {
+  float: left;
+  width: 50%;
+} */
 
 /***** FOOTER *******/
 
@@ -90,9 +100,9 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 990px) {
 
-  .grid-item {
+  /* .grid-item {
     width: 50%;
-  }
+  } */
 
 }
 

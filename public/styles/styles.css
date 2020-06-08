@@ -245,9 +245,9 @@ ul {
   }
 }
 
-.portfolio-section .carousel-content-container img[src="./imgs/art/flower.jpeg"] {
-  /* width: 103%;
-  height: 101%; */
+.portfolio-section .carousel-content-container img[src="./imgs/art/something.png"] {
+  /* width: 103%; */
+  height: 95%;
 }
 
 
@@ -268,7 +268,8 @@ ul {
 
 .compiler-description {
   text-align: justify;
-  padding: 0 15% 0 15%;
+  font-size: .9rem;
+  padding: 0 15% 0 7%;
 }
 
 .compiler-image img {
@@ -473,13 +474,25 @@ input:focus, textarea:focus {
 }
 
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   .cv-section .work-date {
     text-align: left;
     padding: 0;
   }
 
   .compiler-image img {
+    display: none;
+  }
+
+  .compiler-description {
+    padding: 2% 7%;
+  }
+
+  .compiler-description .compiler-title {
+    text-align: center;
+  }
+
+  .portfolio-section .carousel-content-container:nth-of-type(3) {
     display: none;
   }
 }

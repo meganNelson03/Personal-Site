@@ -1,6 +1,10 @@
+require('dotenv').config();
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+
+
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
@@ -41,6 +45,6 @@ app.post("/", (req, res) => {
   res.send(`Your name is ${name}, your email is ${email}, your message is ${message}`);
 })
 
-app.listen(8084, () => {
-  console.log("Listening on port 8083");
+app.listen(8085, () => {
+  console.log("Listening on port 8085");
 });
