@@ -193,7 +193,86 @@ ul {
 
 .portfolio-section .container-fluid {
   background-color: #342b38;
+  padding: 4% 5%;
   color: white;
+  text-align: center;
+}
+
+.portfolio-section .carousel-inner{
+  height: 20%;
+}
+
+.portfolio-section a {
+  color: white;
+}
+
+.portfolio-section a:hover {
+  color: #ff9595;
+  text-decoration: none;
+}
+
+.portfolio-section h2 {
+  letter-spacing: 2px;
+}
+
+.portfolio-section hr {
+  /* background-color: #4c3e52;
+  height: 2px;
+  width: 50%; */
+  margin: 2% auto;
+  opacity: 0.7;
+  height: 2px;
+  width: 90px;
+  border-top: 20px dotted #4c3e52;
+}
+
+.portfolio-section .carousel-content-container img {
+  width: 100%;
+  padding: 0;
+  box-shadow: 5px 5px 5px 0px #1f1921;
+}
+
+.img-style {
+  animation: dimOpacity 250ms forwards;
+}
+
+@keyframes dimOpacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+.portfolio-section .carousel-content-container img[src="./imgs/art/flower.jpeg"] {
+  /* width: 103%;
+  height: 101%; */
+}
+
+
+
+.portfolio-section .row {
+  padding: 0;
+  margin: 0
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-image: none;
+  color: #ff9595;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+
+.compiler-description {
+  text-align: justify;
+  padding: 0 15% 0 15%;
+}
+
+.compiler-image img {
+  width: 100%;
 }
 
 
@@ -206,7 +285,11 @@ ul {
 }
 
 .cv-section hr {
-  padding: 2%;
+  margin: 4% auto;
+  opacity: 0.7;
+  height: 2px;
+  width: 90px;
+  border-top: 20px dotted #342b38;
 }
 
 .col-lg-7, .col-lg-12 {
@@ -231,6 +314,7 @@ ul {
 
 .cv-section p {
   margin: 0;
+  font-weight: 500;
 }
 
 .cv-section ul {
@@ -243,13 +327,17 @@ ul {
   padding-bottom: 2%;
 }
 
-.cv-section .fab:hover {
-  color: #80bdab;
+.cv-section a:hover {
+  color: #1f1921;
+}
+
+.cv-section a {
+  color: #342b38;
 }
 
 .cv-section .work-date {
   text-align: right;
-  padding-top: 2%;
+  padding: 2% 0 0 0;
 }
 
 .work-experience {
@@ -376,9 +464,23 @@ input:focus, textarea:focus {
 
 /**** RESPONSIVE RESIZING *******/
 
+@media (max-width: 768px) {
+
+  .portfolio-section .carousel-content-container:not(:first-child) {
+    display: none;
+  }
+
+}
+
+
 @media (max-width: 990px) {
   .cv-section .work-date {
     text-align: left;
+    padding: 0;
+  }
+
+  .compiler-image img {
+    display: none;
   }
 }
 

@@ -14,7 +14,7 @@ var seedArtDatabase = require("./seed.js");
 seedArtDatabase();
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.get("/art", (req, res) => {
@@ -41,6 +41,6 @@ app.post("/", (req, res) => {
   res.send(`Your name is ${name}, your email is ${email}, your message is ${message}`);
 })
 
-app.listen(8082, () => {
-  console.log("Listening on port 8082");
+app.listen(8084, () => {
+  console.log("Listening on port 8083");
 });

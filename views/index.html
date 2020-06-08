@@ -78,7 +78,7 @@
           <div class="header-text">
             <h1>Hi, I'm <span>Megan Nelson</span></h1>
             <h3>a programmer</h3>
-            <button class="btn btn-lg btn-dark" type="button" href="#about" name="button">About <i class="fas fa-arrow-right"></i></button>
+            <a href="#about"><button class="btn btn-lg btn-dark" type="button" name="button">About <i class="fas fa-arrow-right"></i></button></a>
           </div>
         </div>
       </div>
@@ -105,16 +105,79 @@
 
     <!-- PORTFOLIO -->
 
-    <section class="portfolio-section">
+    <section class="portfolio-section" id="portfolio">
 
-      <div class="container-fluid">
-        <div class="row">
-          <div class="">
-            hello
+
+        <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h2><a href="/art">ART WORK</a></h2>
+                  <hr>
+                </div>
+              </div>
+              <div class="row carousel-images">
+                <div class="col-lg-5 col-md-5 carousel-content-container">
+                  <img src="./imgs/art/the_beach.png" alt="beach img">
+                </div>
+                <div class="col-lg-4 col-md-4 carousel-content-container">
+                  <img src="./imgs/art/joyce3.jpg" alt="joyce img">
+                </div>
+                <div class="col-lg-3 col-md-3 carousel-content-container">
+                  <img src="./imgs/art/flower.jpeg" alt="flower img">
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h2>COMPILER PROJECT</h2>
+                  <hr>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-5 col-md-12 compiler-image">
+                  <img src="./imgs/parseTree.png" alt="parse tree compiler">
+                </div>
+                <div class="col-lg-7 col-md-12 compiler-description">
+
+                  <p>Pascal Programming Language Compiler</p>
+                  <p>Made with: Java</p>
+                  <p>
+                    A compiler is a specialized tool that converts sets of instructions into machine-readable code,
+                    the lower-level format that computers use to execute programs. This compiler takes high level Pascal code as input and
+                    returns assembly instructions.
+                  </p>
+                  <p>
+                    The string input is first tokenized, or broken up into the smallest chunks of syntactic meaning, before being syntactically analyzed
+                    for proper structure. After the input is verified against the Pascal Grammar through parsing, the compiler performs context-sensitive analysis. Semantic analysis is used to check
+                    for illegal arguments, type declaration, proper variable references, proper use of conditional statements, and other contextual code features.
+                    Building a compiler creates a richer understanding of definite finite automatons, grammars, syntax trees, and code validation.
+                  </p>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="carousel-item container-fluid">
+              <h2>hello3</h2>
+            </div>
           </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <i class="carousel-control-prev-icon fas fa-chevron-left fa-2x"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <i class="carousel-control-next-icon fas fa-chevron-right fa-2x"></i>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-      </div>
-
 
     </section>
 
@@ -127,8 +190,8 @@
         <div class="row cv-header">
           <div class="col-lg-12">
             <h2>Megan Nelson</h2>
-            <i class="fab fa-md fa-github"></i>  /
-            <i class="fab fa-md fa-linkedin"></i>
+            <a href="https://github.com/meganNelson03"><i class="fab fa-md fa-github"></i></a>  /
+            <a href="https://www.linkedin.com/in/megan-nelson1/"><i class="fab fa-md fa-linkedin"></i></a>
             <hr>
           </div>
         </div>
@@ -150,8 +213,9 @@
                           <p>Vassar College<p>
                           <p>Poughkeepsie, New York</p>
                           <ul>
-                            <li>Overall GPA: 3.28 / 4.00, Major GPA: 3.85 / 4.00 </li>
-                            <li>Relevant Coursework: lorem ipseum lsjdfklsjdflksdjflksdjflksdjfklsdjf sdlfkjslkfdjslkdjf dsfkjlsdjfs</li>
+                            <li>Overall GPA: 3.28 / 4.00</li>
+                            <li>Major GPA: 3.85 / 4.00</li>
+                            <li>Relevant Coursework: Java Programming (I - III), Analysis of Algorithms, Machine Learning, Compilers, Computer Architecture, and Operating Systems</li>
                             <li></li>
                           </ul>
 
@@ -162,11 +226,10 @@
 
                   <div class="col-lg-12">
                     <h4>The 2020 Web Developer Full-Stack Bootcamp</h4>
-                    <p>Udemy.com</p>
+                    <p>Udemy.com, Instructor: Angela Yu</p>
                     <ul>
-                      <li>Front-End</li>
-                      <li>Back-End</li>
-                      <li></li>
+                      <li>Crafted websites that required both front-end and back-end technologies and libraries</li>
+                      <li>Cousework focused on client-side (HTML, CSS, JS, Bootstrap, jQuery), server-side (Express.js, EJS), and database (Mongoose) concepts</li>
                     </ul>
                   </div>
 
@@ -186,6 +249,7 @@
                     <li>EJS</li>
                     <li>jQuery</li>
                     <li>Bash</li>
+                    <li>Git Version Control</li>
                   </ul>
               </div>
 

@@ -1,5 +1,3 @@
-
-
 var $grid = $('.grid').masonry({
   // options
   itemSelector: '.grid-item',

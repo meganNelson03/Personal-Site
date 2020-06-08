@@ -32,6 +32,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
+  justify-content: center;
+}
+
+.navbar-nav .nav-item {
+  font-size: 1.2rem;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -89,11 +94,18 @@ h1, h2, h3, h4, h5, h6 {
     width: 50%;
   }
 
+}
+
   @media (max-width: 700px) {
 
     .grid-item {
       width: 100%;
     }
-  }
 
-}
+    .navbar-nav .nav-item {
+      font-size: 1.3rem;
+      margin: 0 1.5%;
+    }
+
+
+  }

@@ -23,10 +23,42 @@ var pieces = [
 
 	},
 	{
+		name: "cagefan.jpg",
+		image: "/cagefan.jpg",
+		description: "black and white"
+
+	},
+	{
+		name: "nscon logo",
+		image: "/nsconlogo.png",
+		description: "black and white"
+
+	},
+	{
+		name: "two women",
+		image: "/twowomen.jpg",
+		description: "pencil and ink"
+	},
+	{
+		name: "chantelle",
+		image: "/chantelle.jpg",
+		description: "pen and ink"
+	},
+	{
+		name: "chantelle",
+		image: "/chantelle2.jpg",
+		description: "acrylic"
+	},
+	{
 		name: "chairs",
 		image: "/chair.jpg",
 		description: "pen and ink"
 
+	},
+	{
+		name: "twizel couch",
+		image: "/pencilcouch.jpg",
+		description: "colored pencil"
 	},
 	{
 		name: "Other other",
@@ -107,12 +139,7 @@ var pieces = [
 		description: "coffee paining"
 
 	},
-	{
-		name: "cagefan.jpg",
-		image: "/cagefan.jpg",
-		description: "black and white"
 
-	},
 
 	{
 		name: "purple girl",
@@ -120,12 +147,7 @@ var pieces = [
 		description: "digital"
 
 	},
-	{
-		name: "nscon logo",
-		image: "/nsconlogo.png",
-		description: "black and white"
 
-	},
 	{
 		name: "amanda",
 		image: "/amanda.jpg",
