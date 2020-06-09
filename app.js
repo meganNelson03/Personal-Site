@@ -17,7 +17,8 @@ var seedArtDatabase = require("./seed.js");
 seedArtDatabase();
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
+  // res.sendFile(__dirname + "/views/index.html");
+  res.render("index", {message: ""});
 });
 
 app.get("/art", (req, res) => {
@@ -40,9 +41,7 @@ app.post("/", (req, res) => {
 
   if (!emailRegEx.test(req.body.email)) {
     // if email is not in valid format
-    console.log("NOT A VALID EMAIL: " + req.body.email);
-    res.sendFile(__dirname + "/views/index.html");
-
+    res.render("index", { message : "Invalid email address, please try again."});
 
   } else {
 
@@ -52,32 +51,31 @@ app.post("/", (req, res) => {
       user: process.env.EMAIL_CLIENT,
       pass: process.env.EMAIL_PASSWORD
     }
-    
+
   });
 
-  var mailOptions= {
+  var mailOptions = {
     from: req.body.email,
     to: process.env.EMAIL_CLIENT,
     subject: "Email from Personal Site",
     text: "Name: " + req.body.name + "\n" + "Email: " + req.body.email + "\n\n" + req.body.message
   }
 
-  console.log(mailOptions.from, mailOptions.to, mailOptions.subject, mailOptions.text);
+  // console.log(mailOptions.from, mailOptions.to, mailOptions.subject, mailOptions.text);
 
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
       console.log(error);
-
+      res.render("index", {message: "Something went wrong, please try again."});
     } else {
-      res.sendFile(__dirname + "/views/index.html");
+      res.render("index", {message: "Your message has been sent! I'll get in touch with you soon."});
     }
   });
 
   }
 
-
 });
 
-app.listen(8085, () => {
+app.listen(8086, () => {
   console.log("Listening on port 8085");
 });

@@ -86,6 +86,15 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 18px;
 }
 
+.navbar-toggler-icon {
+
+
+}
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+  border-radius: 2px;
+  box-shadow: none;
+}
+
 .navbar-nav .nav-item .nav-link:hover {
   color: #ff9595;
 }
@@ -370,6 +379,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-me-text {
   padding-bottom: 2%;
+}
+
+.contact-alert-message {
+  border: 1px solid #ff9595;
+  color: #342b38;
+  background-color: #ff9595;
+  margin-bottom: 4%;
+  width: 400px;
+  margin-left: 4%;
+}
+
+.contact-alert-button {
+  position: absolute;
+  left: 40px;
+  top: 3px;
+  background-color: #ff9595;
+  /* border: 2px solid #ba6c6c; */
+  border: none;
+  border-radius: 0;
+  padding: 0 10%;
+  color: #342b38;
+
+}
+
+.contact-alert-button:hover {
+  background-color: #ba6c6c;
+  border: none;
+}
+
+.contact-alert-message-display {
+  display: none;
+}
+
+
+#contact-alert-message-text {
+  font-size: .8rem;
+  text-align: left;
+  padding: 2% 0 2% 0;
+  margin: 0;
 }
 
 ::placeholder {
