@@ -3,29 +3,49 @@ html {
 }
 
 body {
-  background: #342b38;
   font-family: "Montserrat", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lexend Tera";
+  font-family: "Lexend Tera", sans-serif;
 }
 
-ul {
-  list-style: none;
-}
-
-/***** SECTION STYLING *****/
+/***** GENERAL SECTION STYLING *****/
 
 .container-fluid {
-  background-color: white;
-  width: 100%;
-  height: 100%;
   padding: 7% 15%;
   color: rgba(0, 0, 0, .7);
 }
 
-/*** CANVAS STYLES ****/
+.index-button {
+  background-color: #342b38;
+  border: 2px solid #80bdab;
+  border-radius: 0px;
+  color: #80bdab;
+  margin-top: 2%;
+  padding: 1% 2%;
+}
+
+.index-button:hover {
+  background-color: #80dbab;
+  border: none;
+  color: #342b38;
+  animation: btn-animate 1s forwards;
+}
+
+/* Button Scale Animation */
+
+@keyframes btn-animate {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/***** CANVAS STYLES *********/
 
 #myCanvas {
   width: calc(100vw);
@@ -33,25 +53,44 @@ ul {
 }
 
 .background-image {
-  position: absolute;
-  color: #403445;
   opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 5%;
   z-index: 0;
   width: 100%;
   height: calc(100vh);
-  left: 0;
-  top: 5%;
 }
 
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 /********* NAVIGATION **********/
 
 .navbar {
-  width: 100%;
   position: fixed;
   padding: .75% 5%;
+  width: 100%;
   z-index: 99;
 }
+
+.nav-link {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ff9595;
+}
+
+/*  Navbar Animations */
 
 .scrolled {
     background-color: #342b38;
@@ -62,62 +101,36 @@ ul {
 .unscrolled {
   background-color: none;
   transition: background-color 1000ms;
-
-}
-
-.nav-link {
-  letter-spacing: 4px;
-  text-transform: uppercase;
-
-}
-
-.nav-item {
-  padding: 0 18px;
-}
-
-
-.navbar-nav .nav-item .nav-link:hover {
-  color: #ff9595;
 }
 
 @keyframes makeOpaque {
-
   from {
     background-color: none;
   }
-
   to {
     background-color: #342b38;
   }
-
-
 }
-
-
 
 /***** HEADER SECTION *****/
 
 .header-section {
   background-color: #342b38;
-  font-family: "Lexend Terra", "Montserrat";
+  border-bottom: 5px solid #ff9595;
   color: white;
   text-align: center;
   padding: 15% 7%;
   width: 100%;
   height: calc(100vh);
-  border-bottom: 5px solid #ff9595;
-}
-
-.header-text {
-  line-height: 2;
-  position: relative;
 }
 
 .header-text h1, .header-text h3 {
-  font-size: 3rem;
   line-height: 2;
-  font-family: "Lexend Tera";
   text-shadow: -1px 2px 8px rgba(33,27,35,1);
+}
+
+.header-text h1 {
+  font-size: 3rem;
 }
 
 .header-text h3 {
@@ -129,44 +142,15 @@ ul {
   font-weight: 700;
 }
 
-.canvas-container {
+/* Header Button Animation */
 
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-}
-
-
-
-.header-text .btn {
-
-  border: 2px solid #80bdab;
-  margin-top: 2%;
-  background-color: #342b38;
-  color: #80bdab;
-  padding: 1% 2%;
-  border-radius: 0px;
-
-
-}
-
-.header-text .btn:hover {
-
-  background-color: #80dbab;
-  color: #342b38;
-  animation: btn-animate 1s forwards;
-
-}
-
-.animated {
-  animation-name: arrowAnimate;
+.header-move-icon {
+  animation-name: arrow-animation;
   animation-duration: .5s;
   animation-fill-mode: forwards;
 }
 
-@keyframes arrowAnimate {
+@keyframes arrow-animation {
   from {
     transform: rotate(0);
   }
@@ -186,20 +170,15 @@ ul {
 
 .about-section p {
   line-height: 2;
-
 }
 
 /***** PORTFOLIO *******/
 
 .portfolio-section .container-fluid {
   background-color: #342b38;
-  padding: 4% 5%;
   color: white;
   text-align: center;
-}
-
-.portfolio-section .carousel-inner{
-  height: 20%;
+  padding: 4% 5%;
 }
 
 .portfolio-section a {
@@ -211,14 +190,7 @@ ul {
   text-decoration: none;
 }
 
-.portfolio-section h2 {
-  letter-spacing: 2px;
-}
-
 .portfolio-section hr {
-  /* background-color: #4c3e52;
-  height: 2px;
-  width: 50%; */
   margin: 2% auto;
   opacity: 0.7;
   height: 2px;
@@ -226,35 +198,29 @@ ul {
   border-top: 20px dotted #4c3e52;
 }
 
-.portfolio-section .carousel-content-container img {
+.portfolio-section h2 {
+  letter-spacing: 2px;
+}
+
+.portfolio-section .carousel-inner {
+  padding-bottom: 5%;
+}
+
+.portfolio-section .carousel-slide1-container img {
   width: 100%;
-  padding: 0;
   box-shadow: 5px 5px 5px 0px #1f1921;
 }
 
-.img-style {
-  animation: dimOpacity 250ms forwards;
-}
-
-@keyframes dimOpacity {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
-
-.portfolio-section .carousel-content-container img[src="./imgs/art/something.png"] {
-  /* width: 103%; */
+.portfolio-section .carousel-slide1-container img[src="./imgs/art/something.png"] {
   height: 95%;
 }
 
+.portfolio-section .carousel-slide2-container {
+  padding-left: 5%;
+}
 
-
-.portfolio-section .row {
-  padding: 0;
-  margin: 0
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -262,8 +228,8 @@ ul {
   color: #ff9595;
 }
 
-.carousel-control-prev, .carousel-control-next {
-  width: 5%;
+.carousel-images {
+  padding: 0 2%;
 }
 
 .compiler-description {
@@ -276,25 +242,46 @@ ul {
   width: 100%;
 }
 
+/* Portfolio Image Animation */
 
-/**** CV ******/
+.portfolio-image-style {
+  animation: dim-image-opacity 250ms forwards;
+}
 
+@keyframes dim-image-opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+/******* CV ****************/
 
 .cv-header {
   text-align: center;
   padding-bottom: 4%;
 }
 
+.cv-section a {
+  color: #342b38;
+}
+
+.cv-section a:hover {
+  color: #1f1921;
+}
+
 .cv-section hr {
+  border-top: 20px dotted #342b38;
   margin: 4% auto;
   opacity: 0.7;
   height: 2px;
   width: 90px;
-  border-top: 20px dotted #342b38;
 }
 
-.col-lg-7, .col-lg-12 {
-  padding-left: 0;
+.cv-section h2 {
+  font-size: 2.25rem;
 }
 
 .cv-section h3 {
@@ -306,11 +293,6 @@ ul {
 .cv-section h4 {
   font-family: "Montserrat";
   font-weight: 500;
-
-}
-
-.cv-section h2 {
-  font-size: 2.25rem;
 }
 
 .cv-section p {
@@ -320,6 +302,7 @@ ul {
 
 .cv-section ul {
   padding-top: 1%;
+  list-style: none;
 }
 
 .cv-section li {
@@ -328,34 +311,46 @@ ul {
   padding-bottom: 2%;
 }
 
-.cv-section a:hover {
-  color: #1f1921;
-}
-
-.cv-section a {
-  color: #342b38;
-}
-
 .cv-section .work-date {
   text-align: right;
-  padding: 2% 0 0 0;
+  padding-top: 2%;
+}
+
+.work-place, .work-description, .resume-section-title {
+  padding-left: 0;
 }
 
 .work-experience {
   padding-bottom: 2%;
-  margin: 0;
   padding-left: 0;
-  padding-right: 0;
+  margin: 0;
 }
-
 
 /****** CONTACT ME *******/
 
 .contact-section .container-fluid {
   background-color: #342b38;
-  text-align: center;
   color: white;
+  text-align: center;
   padding-bottom: 4%;
+}
+
+.contact-section input:focus, .contact-section textarea:focus {
+  outline: 2px solid white;
+}
+
+.contact-section form {
+  margin: 0 auto;
+}
+
+.contact-section form input[type="text"], form textarea {
+  width: 400px;
+  background-color: #80bdab;
+  color: #342b38;
+  border: none;
+  font-size: 1.05rem;
+  padding: 2%;
+  margin-bottom: 20px;
 }
 
 .contact-section hr {
@@ -369,72 +364,30 @@ ul {
   font-size: 3rem;
 }
 
-.contact-me-text {
-  padding-bottom: 2%;
-}
-
-.contact-section .btn {
-  border: 2px solid #80bdab;
-  margin-top: 2%;
-  background-color: #342b38;
-  color: #80bdab;
-  padding: 1% 2%;
-
-  border-radius: 0px;
-
-}
-
-.contact-section .btn:hover {
-  background-color: #80bdab;
-  color: #342b38;
-  animation: btn-animate 1s forwards;
-}
-
-@keyframes btn-animate {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.05);
-  }
-}
-
 .contact-section p {
   font-size: 1.2rem;
 }
 
-form {
-  margin: 0 auto;
+.contact-me-text {
+  padding-bottom: 2%;
 }
 
-form input[type="text"], form textarea {
-  width: 400px;
-  background-color: #80bdab;
-  color: #342b38;
-  border: none;
-  font-size: 1.05rem;
-  padding: 2%;
-  margin-bottom: 20px;
+::placeholder {
+  color: #bbf1c8;
+  opacity: 1;
 }
 
-input:focus, textarea:focus {
-  outline: 2px solid white;
-}
+/* Contact Form Text Animation */
 
 .contactAnimation {
-  animation-name: afraid;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation-name: change-text-scale 1s forwards;
 }
 
-@keyframes afraid {
+@keyframes change-text-scale {
   from {
     font-size: 1.2rem;
   }
-
   to {
-
     font-size: 1.25rem;
   }
 }
@@ -462,12 +415,11 @@ input:focus, textarea:focus {
   opacity: 0.5;
 }
 
-
 /**** RESPONSIVE RESIZING *******/
 
 @media (max-width: 768px) {
 
-  .portfolio-section .carousel-content-container:not(:first-child) {
+  .portfolio-section .carousel-slide1-container:not(:first-child) {
     display: none;
   }
 
@@ -492,7 +444,7 @@ input:focus, textarea:focus {
     text-align: center;
   }
 
-  .portfolio-section .carousel-content-container:nth-of-type(3) {
+  .portfolio-section .carousel-slide1-container:nth-of-type(3) {
     display: none;
   }
 }

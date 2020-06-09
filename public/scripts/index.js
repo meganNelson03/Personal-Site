@@ -11,11 +11,11 @@ $(document).scroll(function() {
 
 
 $(".btn").mouseover(function() {
-  $(".fas").addClass("animated");
+  $(".header-arrow-icon").addClass("header-move-icon");
 });
 
 $(".btn").mouseout(function () {
-  $(".fas").removeClass("animated");
+  $(".header-arrow-icon").removeClass("header-move-icon");
 });
 
 $(".contact-section p").hover(function() {
@@ -23,9 +23,9 @@ $(".contact-section p").hover(function() {
 });
 
 $(".portfolio-section h2").hover(function() {
-  $(".portfolio-section .carousel-images").addClass("img-style");
+  $(".portfolio-section .carousel-images").addClass("portfolio-image-style");
 });
 
 $(".portfolio-section h2").mouseout(function() {
-  $(".portfolio-section .carousel-images").removeClass("img-style");
+  $(".portfolio-section .carousel-images").removeClass("portfolio-image-style");
 });

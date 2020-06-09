@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Star Project</title>
+    <title>Megan Nelson</title>
 
     <!-- paper.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.7/paper-full.js" charset="utf-8"></script>
@@ -24,6 +24,8 @@
     <!-- my css -->
     <link rel="stylesheet" href="/styles/styles.css">
 
+    <link rel="icon" href="./imgs/favicon.ico">
+
   </head>
   <body>
 
@@ -31,7 +33,7 @@
 
     <section>
 
-      <nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark">
+      <nav id="myNavbar" class="navbar navbar-expand-md navbar-dark">
         <a class="navbar-brand" href=""></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler01">
@@ -78,7 +80,7 @@
           <div class="header-text">
             <h1>Hi, I'm <span>Megan Nelson</span></h1>
             <h3>a programmer</h3>
-            <a href="#about"><button class="btn btn-lg btn-dark" type="button" name="button">About <i class="fas fa-arrow-right"></i></button></a>
+            <a href="#about"><button class="index-button btn btn-lg btn-dark" type="button" name="button">About <i class="fas fa-arrow-right header-arrow-icon"></i></button></a>
           </div>
         </div>
       </div>
@@ -118,19 +120,20 @@
                 </div>
               </div>
               <div class="row carousel-images">
-                <div class="col-lg-5 col-md-6 carousel-content-container">
+                <div class="col-lg-5 col-md-6 carousel-slide1-container">
                   <img src="./imgs/art/the_beach.png" alt="beach img">
                 </div>
-                <div class="col-lg-4 col-md-6 carousel-content-container">
+                <div class="col-lg-4 col-md-6 carousel-slide1-container">
                   <img src="./imgs/art/joyce3.jpg" alt="joyce img">
                 </div>
-                <div class="col-lg-3 carousel-content-container">
+                <div class="col-lg-3 carousel-slide1-container">
                   <img src="./imgs/art/something.png" alt="flower img">
                 </div>
               </div>
             </div>
 
             <div class="carousel-item container-fluid">
+
               <div class="row">
                 <div class="col-lg-12">
                   <a href="https://github.com/meganNelson03/Compiler/tree/master/Compiler_Project/Compiler-Nelson/src/parser"><h2>COMPILER PROJECT</h2></a>
@@ -138,31 +141,36 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-lg-5 col-md-12 compiler-image">
-                  <img src="./imgs/parseTree.png" alt="parse tree compiler">
-                </div>
-                <div class="col-lg-7 col-md-12">
-                  <div class="compiler-description">
-                    <span class="compiler-title">
-                      <p>Pascal Programming Language Compiler</p>
-                      <p>Made with: Java</p>
-                    </span>
-                    <p>
-                      A compiler is a specialized tool that converts sets of instructions into machine-readable code,
-                      the lower-level format that computers use to execute programs. This compiler takes high level Pascal code as input and
-                      returns assembly instructions.
-                    </p>
-                    <p>
-                      The string input is first tokenized, or broken up into the smallest possible chunks of meaning, before being syntactically analyzed
-                      for proper structure. After the input is verified against the Pascal Grammar through parsing, the compiler performs context-sensitive analysis. Semantic analysis is used to check
-                      for illegal arguments, type declaration, proper variable references, proper use of conditional statements, and other contextual code features.
-                      Building a compiler creates a richer understanding of definite finite automatons, grammars, syntax trees, and code validation.
-                    </p>
-                    Code: <a href="https://github.com/meganNelson03/Compiler/tree/master/Compiler_Project/Compiler-Nelson/src/parser"><i class="fab fa-github fa-lg"></i></a>
+              <div class="carousel-slide2-container">
+                <div class="row">
+                  <div class="col-lg-5 col-md-12 compiler-image">
+                    <img src="./imgs/parseTree.png" alt="parse tree compiler">
+                  </div>
+                  <div class="col-lg-7 col-md-12">
+                    <div class="compiler-description">
+                      <span class="compiler-title">
+                        <p>Pascal Programming Language Compiler</p>
+                        <p>Made with: Java</p>
+                      </span>
+                      <p>
+                        A compiler is a specialized tool that converts sets of instructions into machine-readable code,
+                        the lower-level format that computers use to execute programs. This compiler takes high level Pascal code as input and
+                        returns assembly instructions.
+                      </p>
+                      <p>
+                        The string input is first tokenized, or broken up into the smallest possible chunks of meaning, before being syntactically analyzed
+                        for proper structure. After the input is verified against the Pascal Grammar through parsing, the compiler performs context-sensitive analysis. Semantic analysis is used to check
+                        for illegal arguments, type declaration, proper variable references, proper use of conditional statements, and other contextual code features.
+                        Building a compiler creates a richer understanding of definite finite automatons, grammars, syntax trees, and code validation.
+                      </p>
+                      Code: <a href="https://github.com/meganNelson03/Compiler/tree/master/Compiler_Project/Compiler-Nelson/src/parser"><i class="fas fa-code"></i></a>
+                    </div>
                   </div>
                 </div>
+
               </div>
+
+
 
 
 
@@ -205,7 +213,7 @@
               <div class="resume-section col-lg-9">
 
                 <div class="row">
-                  <div class="col-lg-12">
+                  <div class="resume-section-header col-lg-12">
                     <h3>Education</h3>
                   </div>
                 </div>
@@ -271,7 +279,7 @@
         <div class="resume-section">
 
         <div class="row">
-          <div class="col-lg-12">
+          <div class="resume-section-title col-lg-12">
               <h3>Experience</h3>
           </div>
         </div>
@@ -281,7 +289,7 @@
           <div class="work-experience">
 
             <div class="row">
-              <div class="col-lg-7">
+              <div class="work-place col-lg-7">
                 <h4>Freelance Writing</h4>
                 <p>TextBroker, Inc.</p>
                 <p>Christchurch, New Zealand</p>
@@ -292,7 +300,7 @@
             </div>
 
             <div class="row">
-              <div class="col-lg-12">
+              <div class="work-description col-lg-12">
                 <ul>
                   <li>Crafted hundreds of articles, technical papers, teaching materials, and press releases based on client specification</li>
                   <li>Expressed knowledge concerning software, web development, UX design, and business intelligence</li>
@@ -305,7 +313,7 @@
           <div class="work-experience">
 
             <div class="row">
-              <div class="col-lg-7">
+              <div class="work-place col-lg-7">
                 <h4>Climate Lobby Intern</h4>
                 <p>Citizens' Climate Lobby</p>
                 <p>Salt Lake City, Utah</p>
@@ -316,7 +324,7 @@
             </div>
 
             <div class="row">
-              <div class="col-lg-12">
+              <div class="work-description col-lg-12">
                 <ul>
                   <li>Met with mayors and Utah House Representatives to discuss Carbon Fee and Dividend policies</li>
                   <li>Worked on community outreach to city council members and residents to discuss carbon pricing</li>
@@ -333,7 +341,7 @@
 
           <div class="work-experience">
             <div class="row">
-              <div class="col-lg-7">
+              <div class="work-place col-lg-7">
                 <h4>Computer Science Tutor</h4>
                 <p>Vassar College</p>
                 <p>Poughkeepsie, New York</p>
@@ -351,7 +359,7 @@
 
           <div class="work-experience col-lg-12">
             <div class="row">
-              <div class="col-lg-7">
+              <div class="work-place col-lg-7">
                 <h4>Kitten Nursery Intern</h4>
                 <p>Best Friends' Animal Society</p>
                 <p>Salt Lake City, Utah</p>
@@ -377,7 +385,7 @@
         <div class="resume-section">
 
           <div class="row">
-            <div class="col-lg-12">
+            <div class="resume-section-title col-lg-12">
               <h3>Activities</h3>
             </div>
           </div>
@@ -385,7 +393,7 @@
 
           <div class="work-experience col-lg-12">
             <div class="row">
-              <div class="col-lg-7">
+              <div class="work-place col-lg-7">
                 <h4>NSO President and Treasurer</h4>
                 <p>Vassar College</p>
                 <p>Poughkeepsie, New York</p>
@@ -403,7 +411,7 @@
 
           <div class="work-experience col-lg-12">
             <div class="row">
-              <div class="col-lg-7">
+              <div class="work-place col-lg-7">
                 <h4>The Listening Center Certified Listener</h4>
                 <p>Vassar College</p>
                 <p>Poughkeepsie, New York</p>
@@ -462,7 +470,7 @@
                 <textarea rows="10" cols="2" name="message" placeholder="your message"></textarea>
               </div>
               <div class="col-lg-12">
-                <button class="btn btn-lg btn-dark" type="submit" name="button">Send Message</button>
+                <button class="index-button btn btn-lg btn-dark" type="submit" name="button">Send Message</button>
               </div>
             </form>
           </div>

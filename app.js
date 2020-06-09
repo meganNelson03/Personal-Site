@@ -52,6 +52,7 @@ app.post("/", (req, res) => {
       user: process.env.EMAIL_CLIENT,
       pass: process.env.EMAIL_PASSWORD
     }
+    
   });
 
   var mailOptions= {
