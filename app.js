@@ -17,8 +17,9 @@ var seedArtDatabase = require("./seed.js");
 seedArtDatabase();
 
 app.get("/", (req, res) => {
-  // res.sendFile(__dirname + "/views/index.html");
-  res.render("index", {message: ""});
+
+  res.render("index", {message: "", client_message: ""});
+
 });
 
 app.get("/art", (req, res) => {
@@ -37,14 +38,6 @@ app.get("/art", (req, res) => {
 
 app.post("/", (req, res) => {
 
-  var emailRegEx = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-
-  if (!emailRegEx.test(req.body.email)) {
-    // if email is not in valid format
-    res.render("index", { message : "Invalid email address, please try again."});
-
-  } else {
-
   var transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
@@ -61,18 +54,14 @@ app.post("/", (req, res) => {
     text: "Name: " + req.body.name + "\n" + "Email: " + req.body.email + "\n\n" + req.body.message
   }
 
-  // console.log(mailOptions.from, mailOptions.to, mailOptions.subject, mailOptions.text);
-
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
       console.log(error);
-      res.render("index", {message: "Something went wrong, please try again."});
+      res.render("index", {message: "Something went wrong, please try again.", client_message : req.body.message });
     } else {
-      res.render("index", {message: "Your message has been sent! I'll get in touch with you soon."});
+      res.render("index", {message: "Your message has been sent successfully!"});
     }
   });
-
-  }
 
 });
 

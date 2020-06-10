@@ -1,3 +1,48 @@
+$(document).ready(function() {
+
+  $(".contact-form").submit(function(event) {
+    console.log("submitted");
+    event.preventDefault();
+    var $form = $(this);
+
+    var name = $form[0][0].value;
+    var email = $form[0][1].value;
+    var message = $form[0][2].value;
+
+    console.log(name, email, message);
+
+
+    if (!checkEmail(email)) {
+      // if email is not valid
+      $(".contact-alert-message").removeClass("contact-alert-message-display");
+      $("#contact-alert-message-text").html("Invalid email address, please try again.");
+      return;
+    }
+
+
+    $.ajax({
+      type: "POST",
+      url: "/",
+      data: $(".contact-form").serialize(),
+      success: function(res) {
+        console.log(res);
+        $(".contact-alert-message").removeClass("contact-alert-message-display");
+        $("#contact-alert-message-text").html("Your message has been successfully sent!");
+        $(".contact-form input").val("");
+        $(".contact-form textarea").val("");
+      }
+    });
+
+  });
+
+});
+
+function checkEmail(email) {
+  var emailRegEx = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+  return emailRegEx.test(email);
+}
+
+
 $(document).scroll(function() {
 
   $(".navbar").addClass("scrolled");
@@ -31,6 +76,5 @@ $(".portfolio-section h2").mouseout(function() {
 });
 
 $(".contact-alert-button").on("click", function() {
-  console.log("clciked")
   $(".contact-alert-message").addClass("contact-alert-message-display");
 })
