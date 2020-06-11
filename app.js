@@ -27,12 +27,12 @@ app.get("/art", (req, res) => {
   Piece.find({}, (err, pieces) => {
 		if (err) {
 			console.log(err);
+      res.render("index");
 		} else {
 			res.render("art", {pieces: pieces});
 		}
 
 	});
-
 
 });
 
@@ -44,7 +44,6 @@ app.post("/", (req, res) => {
       user: process.env.EMAIL_CLIENT,
       pass: process.env.EMAIL_PASSWORD
     }
-
   });
 
   var mailOptions = {

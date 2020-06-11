@@ -86,13 +86,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 18px;
 }
 
-.navbar-toggler-icon {
-
-
-}
 .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
-  border-radius: 2px;
   box-shadow: none;
+  outline: 1px solid #ff9595;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -112,15 +108,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: background-color 1000ms;
 }
 
-@keyframes makeOpaque {
-  from {
-    background-color: none;
-  }
-  to {
-    background-color: #342b38;
-  }
-}
-
 /***** HEADER SECTION *****/
 
 .header-section {
@@ -128,9 +115,14 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 5px solid #ff9595;
   color: white;
   text-align: center;
-  padding: 15% 7%;
   width: 100%;
   height: calc(100vh);
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .header-text h1, .header-text h3 {
@@ -211,10 +203,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px;
 }
 
-.portfolio-section .carousel-inner {
-  padding-bottom: 5%;
-}
-
 .portfolio-section .carousel-slide1-container img {
   width: 100%;
   box-shadow: 5px 5px 5px 0px #1f1921;
@@ -226,6 +214,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-section .carousel-slide2-container {
   padding-left: 5%;
+}
+
+.portfolio-section .carousel-inner {
+  padding-bottom: 5%;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -465,7 +457,40 @@ h1, h2, h3, h4, h5, h6 {
 
 /**** RESPONSIVE RESIZING *******/
 
+@media (max-width: 600px) {
+
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .header-text h3 {
+    font-size: 1.75rem;
+  }
+
+  .contact-section {
+    /* padding-right: 5%; */
+  }
+}
+
+@media (max-width: 700px) {
+
+  h1 {
+    line-height: 1.5;
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+}
+
 @media (max-width: 768px) {
+
+  #myNavbar {
+    padding-right: 1%;
+    padding-top: 1%;
+  }
 
   .portfolio-section .carousel-slide1-container:not(:first-child) {
     display: none;
@@ -473,12 +498,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
 @media (max-width: 991px) {
-  .cv-section .work-date {
-    text-align: left;
-    padding: 0;
-  }
 
   .compiler-image img {
     display: none;
@@ -495,52 +515,10 @@ h1, h2, h3, h4, h5, h6 {
   .portfolio-section .carousel-slide1-container:nth-of-type(3) {
     display: none;
   }
-}
 
-
-@media (max-width: 700px) {
-  .header {
-    padding-top: 30%;
-  }
-
-  #myNavbar {
-      position: absolute;
-      width: 100%;
-      z-index: 9999;
-  }
-
-  h1 {
-    line-height: 1.5;
-    font-size: 2.75rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
-
-
-
-}
-
-@media (min-width: 750px) and (max-width: 990px) {
-
-  nav.navbar {
-    padding-top: 3%;
-  }
-
-  .header {
-      padding-top: 15%;
-      padding-left: 15%;
-      padding-right: 15%;
-  }
-
-  h1 {
-    line-height: 1.5;
-    font-size: 2.75rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
+  .cv-section .work-date {
+    text-align: left;
+    padding: 0;
   }
 
 }

@@ -9,13 +9,14 @@ $(document).ready(function() {
     var email = $form[0][1].value;
     var message = $form[0][2].value;
 
-    console.log(name, email, message);
-
-
     if (!checkEmail(email)) {
-      // if email is not valid
+      // If Email is not valid:
       $(".contact-alert-message").removeClass("contact-alert-message-display");
       $("#contact-alert-message-text").html("Invalid email address, please try again.");
+      return;
+    } else if (name.length < 1) {
+      $(".contact-alert-message").removeClass("contact-alert-message-display");
+      $("#contact-alert-message-text").html("Please leave your name.");
       return;
     }
 

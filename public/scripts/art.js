@@ -1,9 +1,6 @@
 var $grid = $('.grid').masonry({
-  // options
   itemSelector: '.grid-item',
   resize: true,
-  // columnWidth: 0,
-  // columns: 3,
   percentPosition: true
 });
 
@@ -12,3 +9,14 @@ $grid.imagesLoaded().progress(
     $grid.masonry("layout");
   }
 )
+
+$("img").on("click", function() {
+
+  console.log(this);
+  $(".modal").css("display", "block");
+  $("#my-image").attr("src", this.src);
+});
+
+$(".close-modal").on("click", function() {
+  $(".modal").css("display", "none");
+})
