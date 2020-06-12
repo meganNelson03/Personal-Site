@@ -2,6 +2,7 @@ body {
   background-color: #342b38;
   font-family: "Montserrat", sans-serif;
   color: white;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,12 +18,11 @@ h1, h2, h3, h4, h5, h6 {
 /**** HEADER SECTION ******/
 
 .header-section {
-  text-align: center;
-  background-color: #342b38;
+  text-align: left;
 }
 
 .header-section .container-fluid {
-  padding-bottom: 0%;
+  padding: 9% 15% 0 15%;
 }
 
 .header-section hr {
@@ -31,20 +31,32 @@ h1, h2, h3, h4, h5, h6 {
   height: 5px;
 }
 
-.navbar {
-  justify-content: center;
+.header-title, h1 {
+  text-align: right;
+  width: 100%;
+  font-size: 6.5vw;
 }
 
-.navbar-nav .nav-item {
-  font-size: 1.2rem;
+.header-title div:first-of-type {
+  font-size: 10vw;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-  color: #ff9595;
+.container-fluid {
+  position: relative;
 }
 
-.nav-link {
-  letter-spacing: 2px;
+.header-section .header-text {
+  line-height: 2;
+  text-align: justify;
+  padding-top: 4.5%;
+}
+
+.art-background-image {
+  position: absolute;
+  z-index: 0;
+  top: -500px;
+  left: -250px;
+  width: 100%;
 }
 
 /***** ART SECTION *******/
@@ -61,9 +73,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .piece-image img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   box-shadow: 5px 5px 5px 0px #1f1921;
+
+
 }
+
+.piece-image {
+  text-align: center;
+}
+
+.piece-im {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.piece-im:hover {
+  opacity: 0.5;
+}
+
+.piece-caption {
+  display: none;
+  position: relative;
+  z-index: 1;
+  bottom: 23px;
+  text-transform: uppercase;
+  text-shadow: 1px 0px 4px rgba(0, 0, 0, 1.0);
+  font-weight: 500;
+}
+
 
 .grid {
   width: 100%;
@@ -127,13 +167,10 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-img:not(#my-image):hover {
-  opacity: 0.7;
-}
 
 
-.modal-content {
-  animation: zoom 0.6s;
+.modal {
+  animation: zoom .25s;
 }
 
 @keyframes zoom {
@@ -141,6 +178,7 @@ img:not(#my-image):hover {
     transform:scale(0);
   }
   to {
+
     transform: scale(1);
   }
 }
@@ -148,6 +186,27 @@ img:not(#my-image):hover {
 
 /********* RESPONSIVE RESIZING *********/
 
+@media (max-width: 1200px) {
+  .header-title div {
+    display: inline;
+    text-align: center;
+  }
+
+  .header-title, h1 {
+    text-align: center;
+  }
+
+  .header-title div:first-of-type {
+    font-size: 6.5vw;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+
+  .grid-item {
+    width: 50%;
+  }
+}
 
 @media (max-width: 700px) {
 
@@ -159,5 +218,4 @@ img:not(#my-image):hover {
     font-size: 1.3rem;
     margin: 0 1.5%;
   }
-
 }

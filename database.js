@@ -2,7 +2,7 @@ var pieces = [
 	{
 		name: "The Beach",
 		image: "/the_beach.png",
-		description: "black and white"
+		description: "pen and ink"
 	},
 	{
 		name: "Flower",
@@ -13,31 +13,31 @@ var pieces = [
 	{
 		name: "something",
 		image: "/something.png",
-		description: "black and white"
+		description: "pen and ink"
 
 	},
 	{
 		name: "indoors",
 		image: "/indoors.jpg",
-		description: "black and white"
+		description: "pen and ink"
 
 	},
 	{
 		name: "cagefan.jpg",
 		image: "/cagefan.jpg",
-		description: "black and white"
+		description: "acrylic"
 
 	},
 	{
 		name: "nscon logo",
 		image: "/nsconlogo.png",
-		description: "black and white"
+		description: "pen and ink"
 
 	},
 	{
 		name: "two women",
 		image: "/twowomen.jpg",
-		description: "pencil and ink"
+		description: "pen and ink"
 	},
 	{
 		name: "chantelle",

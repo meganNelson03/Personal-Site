@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .background-image {
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   left: 0;
   top: 5%;
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 /***** HEADER SECTION *****/
 
 .header-section {
-  background-color: #342b38;
+  background-color: #241d26;
   border-bottom: 5px solid #ff9595;
   color: white;
   text-align: center;
@@ -327,6 +327,30 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+.skill-bar {
+  width: 100%;
+  background-color: lightgray;
+  margin-bottom: 4%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.skill {
+  text-align: center;
+  width: 100px;
+  background-color: #80bdab;
+  color: white;
+}
+
+.bar-fill {
+  background-color: #9fd4c4;
+}
+
+.skill-percent {
+  font-size: .8rem;
+  position: absolute;
+  right: 17px;
+}
+
 /****** CONTACT ME *******/
 
 .contact-section .container-fluid {
@@ -494,6 +518,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-section .carousel-slide1-container:not(:first-child) {
     display: none;
+  }
+
+  .portfolio-section .container-fluid {
+    padding: 8% 5%;
   }
 
 }
