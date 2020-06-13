@@ -159,6 +159,11 @@ var pieces = [
 		image: "/stuff.jpg",
 		description: "marker"
 
+	},
+	{
+			name: "crayon girls",
+			image: "/crayon-girls.jpg",
+			description: "crayola crayons"
 	}
 ]
 

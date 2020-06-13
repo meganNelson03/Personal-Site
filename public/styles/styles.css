@@ -27,10 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .index-button:hover {
-  background-color: #80dbab;
-  border: none;
+  background-color: #80bdab;
+  border: 2px solid #80bdab;
   color: #342b38;
-  animation: btn-animate 1s forwards;
+  /* animation: btn-animate 1s forwards; */
 }
 
 /* Button Scale Animation */
@@ -166,11 +166,30 @@ h1, h2, h3, h4, h5, h6 {
 .about-section  h2 {
   font-family: "Lexend Tera";
   font-size: 2.5rem;
-  padding-bottom: 5%;
 }
 
 .about-section p {
   line-height: 2;
+}
+
+.about-section hr {
+  border: 5px solid #ff9595;
+  width: 50%;
+  margin-top: 2%;
+}
+
+.profile-image {
+  width: 100%;
+  padding-right: 6%;
+}
+
+.about-me-header {
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+.about-me-text {
+  text-align: justify;
 }
 
 /***** PORTFOLIO *******/
@@ -265,6 +284,14 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 4%;
 }
 
+.cv-header h2 {
+  padding-bottom: 2%;
+}
+
+.cv-header h6 {
+  padding-bottom: 1%;
+}
+
 .cv-section a {
   color: #342b38;
 }
@@ -279,6 +306,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.7;
   height: 2px;
   width: 90px;
+  padding-bottom: 2%;
 }
 
 .cv-section h2 {
@@ -315,6 +343,10 @@ h1, h2, h3, h4, h5, h6 {
 .cv-section .work-date {
   text-align: right;
   padding-top: 2%;
+}
+
+.resume-section {
+  padding-bottom: 2%;
 }
 
 .work-place, .work-description, .resume-section-title {
@@ -547,6 +579,21 @@ h1, h2, h3, h4, h5, h6 {
   .cv-section .work-date {
     text-align: left;
     padding: 0;
+  }
+
+  .about-me-container {
+    text-align: center;
+  }
+
+  .profile-image-container {
+    margin: auto;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 50%;
+    margin-bottom: 8%;
+
   }
 
 }
