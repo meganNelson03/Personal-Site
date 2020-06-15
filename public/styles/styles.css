@@ -178,6 +178,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2%;
 }
 
+.profile-image-container {
+  width: 100%;
+}
+
 .profile-image {
   width: 100%;
   padding-right: 6%;
@@ -210,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
-.portfolio-section hr {
+.portfolio-section .dot-hr {
   margin: 2% auto;
   opacity: 0.7;
   height: 2px;
@@ -262,6 +266,38 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.article-card {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: justify;
+  box-shadow: 2px 2px 2px 1px #1f1921;
+}
+
+.article-card a {
+  color: rgba(0, 0, 0, 0.8);
+
+}
+
+.article-card img {
+  width: 100%;
+}
+
+.article-header {
+  padding: 2% 1% 0 1%;
+  text-align: center;
+}
+
+.article-content {
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 4%;
+}
+
+.article-row {
+  padding: 0 5%;
+}
+
+
 /* Portfolio Image Animation */
 
 .portfolio-image-style {
@@ -300,7 +336,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #1f1921;
 }
 
-.cv-section hr {
+ .dot-hr {
   border-top: 20px dotted #342b38;
   margin: 4% auto;
   opacity: 0.7;
@@ -526,6 +562,8 @@ h1, h2, h3, h4, h5, h6 {
   .contact-section {
     /* padding-right: 5%; */
   }
+
+
 }
 
 @media (max-width: 700px) {
@@ -537,6 +575,10 @@ h1, h2, h3, h4, h5, h6 {
 
   h3 {
     font-size: 1.75rem;
+  }
+
+  .portfolio-section .carousel-slide1-container:nth-of-type(1) {
+    padding: 0 10%;
   }
 
 }
@@ -585,15 +627,35 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 
+  .article-card {
+    padding: 0;
+    /* width: 80%; */
+  }
+
+  .article-card .article-header {
+    font-size: .8rem;
+  }
+
+  .article-card .article-content {
+    font-size: .8rem;
+  }
+
+
+
+
+
+}
+
+@media (max-width: 1200px) {
+
   .profile-image-container {
     margin: auto;
     text-align: center;
   }
 
   .profile-image {
-    width: 50%;
+    width: 40%;
     margin-bottom: 8%;
-
   }
 
 }
