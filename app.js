@@ -31,8 +31,7 @@ app.get("/art", (req, res) => {
 		} else {
 			res.render("art", {pieces: pieces});
 		}
-
-	});
+  });
 
 });
 

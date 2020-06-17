@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Art</title>
+    <title>Art | Megan Nelson</title>
 
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Montserrat:wght@300;400;500;900&display=swap" rel="stylesheet">
@@ -31,11 +31,14 @@
 
     <section class="header-section">
 
-      <!-- <div class="">
-        <img class="art-background-image" src="./imgs/art-blob.svg" alt="art background">
-      </div> -->
-
       <div class="header container-fluid">
+
+        <div class="row">
+          <div class="art-hr-container1 col-lg-12">
+            <hr>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-xl-5">
             <h1 class="header-title">
@@ -53,11 +56,15 @@
             </p>
           </div>
         </div>
+
         <div class="row">
-          <div class="col-lg-12">
+          <div class="art-hr-container2 col-lg-12">
             <hr>
+            <span class="down-symbol">	&#x25bc;</span>
           </div>
         </div>
+
+
       </div>
 
 
@@ -72,8 +79,8 @@
           <% pieces.forEach((piece) => { %>
 
             <div class="grid-item">
-              <div class="piece-image">
-                <img class="piece-im" src="./imgs/art/<%= piece.image %>" alt="<%= piece.image %>">
+              <div class="piece-image-container">
+                <img class="piece-image" src="./imgs/art/<%= piece.image %>" alt="<%= piece.image %>">
                 <div class="piece-caption">
                   <%= piece.description %>
                 </div>
@@ -91,6 +98,9 @@
     <div class="modal">
 
       <button class="close-modal btn btn-md btn-dark" type="button" name="button">&times;</button>
+
+      <!-- <button class="prev-button btn btn-md btn-dark" type="button" name="button"></button>
+      <button class="next-button btn btn-md btn-dark" type="button" name="button"></button> -->
 
       <img class="modal-image" id="my-image" alt="image">
 

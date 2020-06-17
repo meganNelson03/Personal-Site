@@ -68,7 +68,7 @@ $(".contact-section p").hover(function() {
   $(".contact-section p").addClass("contactAnimation");
 });
 
-$(".portfolio-section h2").hover(function() {
+$(".portfolio-section h2").mouseover(function() {
   $(".portfolio-section .carousel-images").addClass("portfolio-image-style");
 });
 

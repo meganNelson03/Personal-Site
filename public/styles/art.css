@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container-fluid {
   padding: 7% 3%;
+  position: relative;
 }
 
 /**** HEADER SECTION ******/
@@ -26,9 +27,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-section hr {
-  background-color: #ff9595;
+  background-color: #241d26;
   width: 100%;
-  height: 5px;
+  height: 20px;
+  opacity: 0.8;
 }
 
 .header-title, h1 {
@@ -39,10 +41,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-title div:first-of-type {
   font-size: 10vw;
-}
-
-.container-fluid {
-  position: relative;
 }
 
 .header-section .header-text {
@@ -60,38 +58,46 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-/***** ART SECTION *******/
-
-.art-section {
-
+.art-hr-container1 {
+  margin-bottom: 5%;
 }
 
-.piece-image {
+.art-hr-container2 {
+  margin: 5% 0;
+}
+
+.down-symbol {
+  opacity: 0.8;
+  color: #241d26;
+  position: absolute;
+  top: 43%;
+  left: 48%;
+  font-size: 3rem;
+}
+
+/***** ART SECTION *******/
+
+.piece-image-container {
   max-width: 100%;
   object-fit: contain;
   height: auto;
   padding: 2%;
+  text-align: center;
 }
 
-.piece-image img {
+.piece-image {
   position: relative;
   z-index: 1;
   width: 100%;
   box-shadow: 5px 5px 5px 0px #1f1921;
-
-
 }
 
 .piece-image {
-  text-align: center;
-}
-
-.piece-im {
   opacity: 1;
   transition: opacity .5s;
 }
 
-.piece-im:hover {
+.piece-image:hover {
   opacity: 0.5;
 }
 
@@ -104,7 +110,6 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 1px 0px 4px rgba(0, 0, 0, 1.0);
   font-weight: 500;
 }
-
 
 .grid {
   width: 100%;
@@ -155,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.9);
+  animation: zoom .25s;
 }
 
 .close-modal {
@@ -168,11 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
-
-.modal {
-  animation: zoom .25s;
-}
+/* Modal Animation */
 
 @keyframes zoom {
   from {
@@ -184,33 +186,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
 /********* RESPONSIVE RESIZING *********/
 
-@media (max-width: 1200px) {
-  .header-title div {
-    display: inline;
-    text-align: center;
-  }
-
-  .header-title, h1 {
-    text-align: center;
-  }
-
-  .header-title div:first-of-type {
-    font-size: 6.5vw;
-  }
-}
-
-@media (min-width: 701px) and (max-width: 1000px) {
-
-  .grid-item {
-    width: 50%;
-  }
-}
 
 @media (max-width: 700px) {
-
   .grid-item {
     width: 100%;
   }
@@ -218,5 +197,26 @@ h1, h2, h3, h4, h5, h6 {
   .navbar-nav .nav-item {
     font-size: 1.3rem;
     margin: 0 1.5%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-title div:first-of-type {
+    font-size: 6.5vw;
+  }
+
+  .header-title div {
+    display: inline;
+    text-align: center;
+  }
+
+  .header-title, h1 {
+    text-align: center;
   }
 }
