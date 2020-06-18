@@ -14,6 +14,8 @@ app.set("view engine", "ejs");
 var Piece = require("./models/pieces.js");
 var seedArtDatabase = require("./seed.js");
 
+const PORT = process.env.PORT || 8087;
+
 seedArtDatabase();
 
 app.get("/", (req, res) => {
@@ -63,6 +65,6 @@ app.post("/", (req, res) => {
 
 });
 
-app.listen(8086, () => {
-  console.log("Listening on port 8085");
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
 });
