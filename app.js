@@ -3,19 +3,35 @@ require('dotenv').config();
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var MongoClient = require("mongodb").MongoClient;
 var nodemailer = require("nodemailer");
 
+var pieceData = require("./database.js");
 
 const PORT = process.env.PORT || 8087;
 const MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost:27017/personal_site";
 
-console.log("********")
-console.log(process.env.MONGODB_URL);
-console.log("********")
+
+MongoClient.connect(MONGODB_URI, (err, client) => {
+
+
+  var db = client.db("heroku_26b6lmx6");
+  console.log(db);
+
+  db.collection("pieces").insertMany(pieceData, (err, res) => {
+    if (err) throw err;
+
+    console.log("success");
+    client.close();
+  });
+
+});
+
+
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
-mongoose.connect(MONGODB_URI, {useNewUrlParser: "true", useUnifiedTopology: "true"})
+mongoose.connect(MONGODB_URI, {useNewUrlParser: "true", useUnifiedTopology: true})
   .catch( error => console.log(error));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
