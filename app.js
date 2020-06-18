@@ -13,6 +13,8 @@ const MONGODB_URI = process.env.MONGODB_URL /* || "mongodb://localhost:27017/per
 
 console.log("********************");
 console.log(MONGODB_URI);
+console.log(process.env.MONGODB_URL);
+console.log(process.env.EMAIL_CLIENT);
 console.log("*******************")
 
 
