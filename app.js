@@ -11,14 +11,13 @@ const MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost:27017/person
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
-mongoose.connect(MONGODB_URI, {useNewUrlParser: "true", useUnifiedTopology: "true"});
+mongoose.connect(MONGODB_URI, {useNewUrlParser: "true", useUnifiedTopology: "true"})
+  .catch( error => console.log(error));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 var Piece = require("./models/pieces.js");
 var seedArtDatabase = require("./seed.js");
-
-
 
 seedArtDatabase();
 
