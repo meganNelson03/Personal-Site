@@ -7,7 +7,7 @@ var nodemailer = require("nodemailer");
 
 
 const PORT = process.env.PORT || 8087;
-const MONGODB_URI = process.ev.MONGODB_URL || "mongodb://localhost:27017/personal_site";
+const MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost:27017/personal_site";
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
