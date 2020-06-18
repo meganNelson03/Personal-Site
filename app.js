@@ -12,20 +12,20 @@ const PORT = process.env.PORT || 8087;
 const MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost:27017/personal_site";
 
 
-MongoClient.connect(MONGODB_URI, (err, client) => {
-
-
-  var db = client.db("heroku_26b6lmx6");
-  console.log(db);
-
-  db.collection("pieces").insertMany(pieceData, (err, res) => {
-    if (err) throw err;
-
-    console.log("success");
-    client.close();
-  });
-
-});
+// MongoClient.connect(MONGODB_URI, (err, client) => {
+//
+//
+//   var db = client.db("heroku_26b6lmx6");
+//   console.log(db);
+//
+//   db.collection("pieces").insertMany(pieceData, (err, res) => {
+//     if (err) throw err;
+//
+//     console.log("success");
+//     client.close();
+//   });
+//
+// });
 
 
 
@@ -39,7 +39,7 @@ app.set("view engine", "ejs");
 var Piece = require("./models/pieces.js");
 var seedArtDatabase = require("./seed.js");
 
-seedArtDatabase();
+// seedArtDatabase();
 
 app.get("/", (req, res) => {
 
