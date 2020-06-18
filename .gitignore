@@ -2,6 +2,7 @@
 .DS_Store
 Desktop.ini
 .env
+.env1
 
 # Thumbnail cache files
 ._*
