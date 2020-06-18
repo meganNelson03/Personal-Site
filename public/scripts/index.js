@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $(".contact-form").submit(function(event) {
-    console.log("submitted");
+
     event.preventDefault();
     var $form = $(this);
 
@@ -20,13 +20,12 @@ $(document).ready(function() {
       return;
     }
 
-
     $.ajax({
       type: "POST",
       url: "/",
       data: $(".contact-form").serialize(),
       success: function(res) {
-        console.log(res);
+
         $(".contact-alert-message").removeClass("contact-alert-message-display");
         $("#contact-alert-message-text").html("Your message has been successfully sent!");
         $(".contact-form input").val("");

@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-section .container-fluid {
-  padding: 9% 15% 0 15%;
+  padding: 5% 15% 0 15%;
 }
 
 .header-section hr {
@@ -171,7 +171,6 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #342b38;
   background-color: #342b38;
   font-size: 1.25rem;
-
 }
 
 /* Modal Animation */
@@ -181,7 +180,6 @@ h1, h2, h3, h4, h5, h6 {
     transform:scale(0);
   }
   to {
-
     transform: scale(1);
   }
 }

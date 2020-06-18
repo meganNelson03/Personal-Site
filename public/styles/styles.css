@@ -225,7 +225,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.5rem;
 }
 
-
 /* Carousel Styling */
 
 .carousel-slide1-container img {
@@ -552,19 +551,16 @@ h1, h2, h3, h4, h5, h6 {
 /**** RESPONSIVE RESIZING *******/
 
 @media (max-width: 600px) {
-
   .header-text h1 {
     font-size: 2rem;
   }
 
   .header-text h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
-
 }
 
 @media (max-width: 700px) {
-
   h1 {
     line-height: 1.5;
     font-size: 2.75rem;
@@ -574,14 +570,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.75rem;
   }
 
-  .portfolio-section .carousel-slide1-container:nth-of-type(1) {
-    padding: 0 10%;
+  .portfolio-section .carousel-item .row {
+    padding: 3% 10%;
   }
-
 }
 
 @media (max-width: 768px) {
-
   #myNavbar {
     padding-right: 1%;
     padding-top: 1%;
@@ -594,11 +588,9 @@ h1, h2, h3, h4, h5, h6 {
   .portfolio-section .container-fluid {
     padding: 8% 5%;
   }
-
 }
 
 @media (max-width: 991px) {
-
   .compiler-image img {
     display: none;
   }
@@ -639,11 +631,9 @@ h1, h2, h3, h4, h5, h6 {
   .article-card .article-header {
     font-size: .8rem;
   }
-
 }
 
 @media (max-width: 1200px) {
-
   .profile-image-container {
     margin: auto;
     text-align: center;
@@ -653,5 +643,4 @@ h1, h2, h3, h4, h5, h6 {
     width: 40%;
     margin-bottom: 8%;
   }
-
 }
