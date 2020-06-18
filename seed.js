@@ -9,12 +9,12 @@ function seedArtDatabase() {
 	Piece.deleteMany({}, (err) => {
 
 		if (err) throw err;
-		console.log("Deleted piece");
+		// console.log("Deleted piece");
 
 		pieces.forEach((piece) => {
 
 			Piece.create(piece, (err, art) => {
-					console.log("Created piece: " + art);
+					// console.log("Created piece: " + art);
 			});
 		});
 

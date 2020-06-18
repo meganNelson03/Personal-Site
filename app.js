@@ -9,6 +9,10 @@ var nodemailer = require("nodemailer");
 const PORT = process.env.PORT || 8087;
 const MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost:27017/personal_site";
 
+console.log("********")
+console.log(process.env.MONGODB_URL);
+console.log("********")
+
 var app = express();
 app.use(express.static(__dirname + "/public"));
 mongoose.connect(MONGODB_URI, {useNewUrlParser: "true", useUnifiedTopology: "true"})
