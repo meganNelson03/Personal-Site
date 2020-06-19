@@ -20,20 +20,20 @@ console.log("*******************")
 
 
 
-// MongoClient.connect(MONGODB_URI, (err, client) => {
-//
-//
-//   var db = client.db("heroku_26b6lmx6");
-//   console.log(db);
-//
-//   db.collection("pieces").insertMany(pieceData, (err, res) => {
-//     if (err) throw err;
-//
-//     console.log("success");
-//     client.close();
-//   });
-//
-// });
+MongoClient.connect(MONGODB_URI, (err, client) => {
+
+
+  var db = client.db("heroku_26b6lmx6");
+  console.log(db);
+
+  db.collection("pieces").insertMany(pieceData, (err, res) => {
+    if (err) throw err;
+
+    console.log("success");
+    client.close();
+  });
+
+});
 
 
 
