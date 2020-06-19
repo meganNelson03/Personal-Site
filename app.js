@@ -47,7 +47,7 @@ app.set("view engine", "ejs");
 var Piece = require("./models/pieces.js");
 var seedArtDatabase = require("./seed.js");
 
-// seedArtDatabase();
+seedArtDatabase();
 
 app.get("/", (req, res) => {
 

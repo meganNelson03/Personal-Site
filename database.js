@@ -1,7 +1,7 @@
 var pieces = [
 	{
 		name: "The Beach",
-		image: "/the_beach.png",
+		image: "/the_beach.jpg",
 		description: "pen and ink"
 	},
 	{
@@ -123,7 +123,7 @@ var pieces = [
 	},
 	{
 		name: "outdoors",
-		image: "/coffee.png",
+		image: "/coffeeplants.jpg",
 		description: "coffee painting"
 
 	},
