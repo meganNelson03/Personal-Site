@@ -25,7 +25,6 @@ $(document).ready(function() {
       url: "/",
       data: $(".contact-form").serialize(),
       success: function(res) {
-
         $(".contact-alert-message").removeClass("contact-alert-message-display");
         $("#contact-alert-message-text").html("Your message has been successfully sent!");
         $(".contact-form input").val("");

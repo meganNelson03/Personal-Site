@@ -140,6 +140,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
 }
 
+/* .header-lead {
+  margin-bottom: 2%;
+}
+
+.header-subtitle {
+  margin-bottom: 2%;
+} */
+
 .header-section span {
   color: #ff9595;
   font-weight: 700;
