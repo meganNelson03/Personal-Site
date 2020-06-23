@@ -80,7 +80,7 @@ var pieces = [
 	},
 	{
 		name: "Other Joyce",
-		image: "/joyce2.jpg",
+		image: "/joyce2.JPG",
 		description: "colored pencil"
 
 	},
