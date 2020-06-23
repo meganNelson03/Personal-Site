@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+
+
+
   $(".contact-form").submit(function(event) {
 
     event.preventDefault();
@@ -46,11 +49,19 @@ $(document).scroll(function() {
 
   $(".navbar").addClass("scrolled");
 
+
   if ($(document).scrollTop() < 200) {
     $(".navbar").removeClass("scrolled");
     $(".navbar").addClass("unscrolled");
   }
 
+});
+
+$(".navbar-toggler").on("click", function() {
+  var navCollapsed = $(".collapse").is(":hidden");
+  if (navCollapsed) {
+    $(".navbar").addClass("scrolled");
+  }
 });
 
 
