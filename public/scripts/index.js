@@ -49,7 +49,6 @@ $(document).scroll(function() {
 
   $(".navbar").addClass("scrolled");
 
-
   if ($(document).scrollTop() < 200) {
     $(".navbar").removeClass("scrolled");
     $(".navbar").addClass("unscrolled");
@@ -71,10 +70,6 @@ $(".btn").mouseover(function() {
 
 $(".btn").mouseout(function () {
   $(".header-arrow-icon").removeClass("header-move-icon");
-});
-
-$(".contact-section p").hover(function() {
-  $(".contact-section p").addClass("contactAnimation");
 });
 
 $(".portfolio-section h2").mouseover(function() {

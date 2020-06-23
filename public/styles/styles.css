@@ -48,20 +48,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 4% auto;
 }
 
+.index-section-header {
+  font-size: 3rem;
+}
+
 /***** CANVAS STYLES *********/
 
 #myCanvas {
   width: calc(100vw);
-  height: calc(100vh);
-}
-
-.background-image {
-  opacity: 0.3;
-  position: absolute;
-  left: 0;
-  top: 5%;
-  z-index: 0;
-  width: 100%;
   height: calc(100vh);
 }
 
@@ -91,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
   box-shadow: none;
-  outline: 1px solid #ff9595;
+  outline: none;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -123,14 +117,27 @@ h1, h2, h3, h4, h5, h6 {
   height: calc(100vh);
 }
 
+
 .header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.header-section .row {
+  margin: 0 auto;
 }
 
 .header-text {
   width: 100vw;
+}
+
+.header {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header-text h1, .header-text h3 {
@@ -170,11 +177,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /********* ABOUT ME SECTION ************/
-
-.about-section  h2 {
-  font-family: "Lexend Tera";
-  font-size: 2.5rem;
-}
 
 .about-section p {
   line-height: 2;
@@ -228,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-section h2 {
   letter-spacing: 2px;
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
 }
 
 /* Carousel Styling */
@@ -238,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 5px 5px 5px 0px #1f1921;
 }
 
-.carousel-item h2 {
+.carousel-item .index-section-header {
   padding-top: 2%;
 }
 
@@ -347,9 +349,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #1f1921;
 }
 
-.cv-header h2 {
+.cv-header .index-section-header {
   padding-bottom: 2%;
-  font-size: 2rem;
 }
 
 .cv-header h6 {
@@ -449,11 +450,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 4%;
 }
 
-
-.contact-section h2 {
-  font-size: 3rem;
-}
-
 .contact-form-container {
   width: 100%;
   margin: 0 auto;
@@ -528,21 +524,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* Contact Form Text Animation */
-
-.contactAnimation {
-  animation-name: change-text-scale 1s forwards;
-}
-
-@keyframes change-text-scale {
-  from {
-    font-size: 1.2rem;
-  }
-  to {
-    font-size: 1.25rem;
-  }
-}
-
 /***** SOCIALS ******/
 
 .social-section .container-fluid {
@@ -567,28 +548,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /**** RESPONSIVE RESIZING *******/
 
-@media (max-width: 600px) {
-  .header-text h1 {
-    font-size: 2rem;
-  }
-
-  .header-text h3 {
-    font-size: 1.5rem;
-  }
-}
-
 @media (max-width: 700px) {
-  h1 {
+  /* h1 {
     line-height: 1.5;
     font-size: 2.75rem;
   }
 
   h3 {
-    font-size: 1.75rem;
-  }
+    font-size: 1rem;
+  } */
 
   .portfolio-section .carousel-item .row {
     padding: 3% 10%;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    width: 10%;
   }
 }
 
@@ -605,6 +580,22 @@ h1, h2, h3, h4, h5, h6 {
   .portfolio-section .container-fluid {
     padding: 8% 5%;
   }
+
+  .resume-section-title {
+    font-size: 1.5rem;
+  }
+
+  .education-title {
+    font-size: 1rem;
+  }
+
+  .job-title {
+    font-size: 1rem;
+  }
+
+
+
+
 }
 
 @media (max-width: 991px) {
@@ -613,7 +604,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .compiler-description {
-    padding: 2% 7%;
+    padding: 2% 5%;
+    text-align: left;
   }
 
   .compiler-description .compiler-title {
@@ -633,6 +625,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
   }
 
+  .cv-section p {
+    font-size: .9rem;
+  }
+
   .about-me-container {
     text-align: center;
   }
@@ -647,6 +643,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .article-card .article-header {
     font-size: .8rem;
+  }
+
+  .index-section-header {
+    font-size: 2rem;
   }
 }
 
@@ -664,10 +664,49 @@ h1, h2, h3, h4, h5, h6 {
 
 /******** PLATFORM RESPONSIVE **********/
 
-@media (min-width:320px)  {
+@media (min-width: 641px) and (max-width: 990px) {
+
+  .header-text .header-lead {
+    font-size: 2rem;
+    border: 1px solid blue;
+  }
+
+  .header-text .header-subtitle {
+    font-size: 1.5rem;
+    padding-bottom: 2.5%;
+  }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 640px)  {
   /* smartphones, iPhone, portrait 480x320 phones */
 
-  /*** CONTACT SECTION *****/
+  /**** HEADER *****/
+  .header-text .header-lead {
+      font-size: 1.5rem;
+  }
 
+  .header-text .header-subtitle {
+    font-size: 1rem;
+    padding-bottom: 5%;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .header-text .header-lead {
+    font-size: 1rem;
+  }
+
+  .header-text .header-subtitle {
+    font-size: .8rem;
+    padding-bottom: 5%;
+  }
+
+  .index-section-header {
+    font-size: 1.5rem;
+  }
 
 }
