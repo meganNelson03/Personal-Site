@@ -127,6 +127,10 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
 }
 
+.header-text {
+  width: 100vw;
+}
+
 .header-text h1, .header-text h3 {
   line-height: 2;
   text-shadow: -1px 2px 8px rgba(33,27,35,1);
@@ -139,14 +143,6 @@ h1, h2, h3, h4, h5, h6 {
 .header-text h3 {
   font-size: 2rem;
 }
-
-/* .header-lead {
-  margin-bottom: 2%;
-}
-
-.header-subtitle {
-  margin-bottom: 2%;
-} */
 
 .header-section span {
   color: #ff9595;
@@ -176,7 +172,9 @@ h1, h2, h3, h4, h5, h6 {
 .about-section  h2 {
   font-family: "Lexend Tera";
   font-size: 2.5rem;
+
 }
+
 
 .about-section p {
   line-height: 2;
@@ -656,3 +654,5 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 8%;
   }
 }
+
+/******** PLATFORM RESPONSIVE **********/
