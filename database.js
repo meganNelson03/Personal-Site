@@ -50,15 +50,15 @@ var pieces = [
 		description: "acrylic"
 	},
 	{
+		name: "twizel couch",
+		image: "/pencilcouch.jpg",
+		description: "colored pencil"
+	},
+	{
 		name: "chairs",
 		image: "/chair.jpg",
 		description: "pen and ink"
 
-	},
-	{
-		name: "twizel couch",
-		image: "/pencilcouch.jpg",
-		description: "colored pencil"
 	},
 	{
 		name: "Other other",
