@@ -6,15 +6,18 @@ view.onMouseMove = function(event) {
 
 window.onresize = function(event) {
   // Regenerate items every time screen size changes
+  var numberItems = [Math.floor(window.innerWidth / 17), Math.floor(window.innerWidth / 170)];
+
+
   project.activeLayer.children = [];
-  generateAndPlaceItems(100);
-  generateUniqueItem(10, "#80bdab", 15);
-  generateUniqueItem(10, "#ff9595", 10);
+  generateAndPlaceItems(numberItems[0]);
+  generateUniqueItem(numberItems[1], "#80bdab", 15);
+  generateUniqueItem(numberItems[1], "#ff9595", 10);
 }
 
-generateAndPlaceItems(100);
-generateUniqueItem(10, "#80bdab", 15);
-generateUniqueItem(10, "#ff9595", 7);
+generateAndPlaceItems(Math.floor(window.innerWidth / 19));
+generateUniqueItem(Math.floor(window.innerWidth / 170), "#80bdab", 15);
+generateUniqueItem(Math.floor(window.innerWidth / 170), "#ff9595", 7);
 
 
 function onFrame(event) {
