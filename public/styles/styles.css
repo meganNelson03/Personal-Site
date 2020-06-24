@@ -579,7 +579,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1%;
   }
 
-  .portfolio-section .carousel-slide1-container:not(:first-child) {
+  /* .portfolio-section .carousel-slide1-container:not(:first-child) {
+    display: none;
+  } */
+
+  .carousel-slide1-container {
+    width: 90%;
+    margin: 0 auto 5% auto;
+  }
+
+  .carousel-slide1-container:nth-of-type(3) {
     display: none;
   }
 
@@ -624,9 +633,9 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
   }
 
-  .portfolio-section .carousel-slide1-container:nth-of-type(3) {
+  /* .portfolio-section .carousel-slide1-container:nth-of-type(3) {
     display: none;
-  }
+  } */
 
   .cv-section .work-date {
     text-align: left;
@@ -682,6 +691,17 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     padding-bottom: 2.5%;
   }
+
+}
+
+@media (max-width: 768px) {
+
+  /* carousel */
+
+  .carousel-inner {
+    height: 100vh;
+  }
+
 
 }
 
