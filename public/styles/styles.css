@@ -10,6 +10,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Lexend Tera", sans-serif;
 }
 
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
 /***** GENERAL SECTION STYLING *****/
 
 .container-fluid {
@@ -668,7 +673,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .header-text .header-lead {
     font-size: 2rem;
-    border: 1px solid blue;
   }
 
   .header-text .header-subtitle {
@@ -697,7 +701,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 320px) and (max-width: 480px) {
 
   .header-text .header-lead {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .header-text .header-subtitle {
