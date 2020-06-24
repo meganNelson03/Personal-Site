@@ -44,11 +44,11 @@ function checkEmail(email) {
 
 $(document).scroll(function() {
 
-  $(".navbar").addClass("scrolled");
+  $(".navbar").addClass("scrolled-navbar");
 
   if ($(document).scrollTop() < 200) {
-    $(".navbar").removeClass("scrolled");
-    $(".navbar").addClass("unscrolled");
+    $(".navbar").removeClass("scrolled-navbar");
+    $(".navbar").addClass("unscrolled-navbar");
   }
 
 });
@@ -56,7 +56,7 @@ $(document).scroll(function() {
 $(".navbar-toggler").on("click", function() {
   var navCollapsed = $(".collapse").is(":hidden");
   if (navCollapsed) {
-    $(".navbar").addClass("scrolled");
+    $(".navbar").addClass("scrolled-navbar");
   }
 });
 
