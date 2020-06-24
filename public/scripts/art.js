@@ -12,7 +12,6 @@ $grid.imagesLoaded().progress(
 
 
 $(".piece-image").on("click", function() {
-  console.log("hello");
   $(".modal").css("display", "block");
   $("#my-image").attr("src", this.src);
 });
@@ -24,7 +23,6 @@ $(".close-modal").on("click", function() {
 
 $(".piece-image").mouseover(function(event) {
   var target = $(event.target);
-  console.log(target[0]);
   $("img.piece-image[alt=\"" + target[0].alt + "\"] + .piece-caption").css("display", "block");
 
 });
