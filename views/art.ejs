@@ -10,14 +10,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
-    <!-- Masonry.js -->
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
-
-    <!-- images loaded -->
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
     <!-- my stylesheet -->
     <link rel="stylesheet" href="../styles/art.css">
@@ -27,54 +20,62 @@
   </head>
   <body>
 
-    <!-- HEADER -->
+    <!-- NAVBAR -->
 
-    <section class="header-section">
+    <section class="navigation-section">
 
-      <div class="header container-fluid">
+      <div class="container-fluid">
+        <nav id="myNavbar" class="navbar navbar-expand-md navbar-dark">
+          <a class="navbar-brand" href="/">M.N.</a>
 
-        <div class="row">
-          <div class="art-hr-container1 col-lg-12">
-            <hr>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler01">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarToggler01">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#contact">CONTACT</a>
+              </li>
+            </ul>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xl-5">
-            <h1 class="header-title">
-              <div>
-                ART
-              </div>
-              <div>
-                WORK
-              </div>
-            </h1>
-          </div>
-          <div class="col-xl-7">
-            <p class="header-text">
-              It's difficult to sum up what art means to me. Ever since I could hold a pencil, I’ve spent a major part of my life drawing. I enjoy sitting in a quiet place, like a library or a cafe, and capturing the feeling of the space I’m in.  Often I find myself doodling people in public, wondering where they’re headed off to or what sorts of things stress them out. In my work, I like to explore how repeated motifs create form, theme, and feeling. My favorite mediums include pen, ink, and colored pencil. 
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="art-hr-container2 col-lg-12">
-            <hr>
-            <span class="down-symbol">	&#x25bc;</span>
-          </div>
-        </div>
-
-
+        </nav>
       </div>
 
 
+
+
     </section>
+
+
 
     <!-- ART SECTION -->
 
     <section class="art-section">
       <div class="container-fluid">
         <div class="grid">
+
+          <div class="grid-item">
+
+            <div id="header-title-container" class="piece-image-container">
+
+              <h1>
+                <div>
+                  ART
+                </div>
+                <div>
+                  WORK
+                </div>
+              </h1>
+
+            </div>
+          </div>
 
           <% pieces.forEach((piece) => { %>
 
@@ -99,9 +100,6 @@
 
       <button class="close-modal btn btn-md btn-dark" type="button" name="button">&times;</button>
 
-      <!-- <button class="prev-button btn btn-md btn-dark" type="button" name="button"></button>
-      <button class="next-button btn btn-md btn-dark" type="button" name="button"></button> -->
-
       <img class="modal-image" id="my-image" alt="image">
 
       <div class="modal-caption"></div>
@@ -125,8 +123,24 @@
     </section>
 
 
+    <!-- Bootstrap requirements: jQuery, popper, boots-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+          crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <!-- Masonry.js -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+
+    <!-- images loaded -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
     <!-- my javascript -->
     <script src="../scripts/art.js" charset="utf-8"></script>
+
 
   </body>
 </html>

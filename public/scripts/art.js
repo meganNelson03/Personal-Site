@@ -10,7 +10,9 @@ $grid.imagesLoaded().progress(
   }
 )
 
+
 $(".piece-image").on("click", function() {
+  console.log("hello");
   $(".modal").css("display", "block");
   $("#my-image").attr("src", this.src);
 });
