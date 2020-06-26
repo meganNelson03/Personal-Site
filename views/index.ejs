@@ -135,26 +135,6 @@
             <div class="carousel-item active container-fluid">
               <div class="row">
                 <div class="col-lg-12">
-                  <h2 class="index-section-header"><a href="/art">ART WORK</a></h2>
-                  <hr class="dot-hr">
-                </div>
-              </div>
-              <div class="row carousel-images">
-                <div class="col-lg-5 col-md-6 carousel-slide1-container">
-                  <img src="./imgs/art/the_beach.jpg" alt="beach img">
-                </div>
-                <div class="col-lg-4 col-md-6 carousel-slide1-container">
-                  <img src="./imgs/art/joyce3.jpg" alt="joyce img">
-                </div>
-                <div class="col-lg-3 carousel-slide1-container">
-                  <img src="./imgs/art/something.png" alt="flower img">
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item container-fluid">
-              <div class="row">
-                <div class="col-lg-12">
                   <h2 class="index-section-header">WRITTEN WORK</h2>
                   <hr class="dot-hr">
                 </div>
@@ -162,7 +142,7 @@
 
               <div class="article-row row">
                 <div class="col-lg-4 col-md-6 col-12">
-                  <div class="article-card">
+                  <div class="article-card-1 article-card">
                     <img src="./imgs/climate.jpeg" alt="climate 1 image">
                     <h6 class="article-header"><a href="https://www.sltrib.com/opinion/letters/2019/10/01/letter-act-locally-combat/">Letter: Act Locally to Combat Climate Change</a></h6>
                     <hr>
@@ -172,7 +152,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                  <div class="article-card">
+                  <div class="article-card-2 article-card">
                     <img src="./imgs/climate2.jpg" alt="climate 2 img">
                     <h6 class="article-header"><a href="https://www.deseret.com/2018/9/27/20654567/guest-opinion-utahns-deserve-to-hear-candidates-solutions-to-climate-change">Utahns Deserve to Hear Candidate Solutions to Climate Change</a></h6>
                     <hr>
@@ -182,7 +162,7 @@
                   </div>
                 </div>
                 <div class="col-lg-4 col-12">
-                  <div class="article-card">
+                  <div class="article-card-3 article-card">
                     <img src="./imgs/climate3.jpeg" alt="climate 3 image">
                     <h6 class="article-header"><a href="https://www.sltrib.com/opinion/letters/2019/07/30/letter-time-speak-out/">Letter: Time to Speak Out on Climate Change</a></h6>
                     <hr>
@@ -197,12 +177,39 @@
 
               <div class="row">
                 <div class="col-lg-12">
+                  <h2 class="index-section-header"><a href="/art">ART WORK</a></h2>
+                  <hr class="dot-hr">
+                </div>
+              </div>
+              <div class="row carousel-art-container">
+                <div class="col-lg-5 col-md-12">
+                  <img src="./imgs/art/the_beach.jpg" alt="beach img">
+                </div>
+                <div class="col-lg-7 col-md-12">
+                  <div class="carousel-art-description">
+                    <p>
+                      It's difficult to express just how large a role art has played in my life. I enjoy sitting in a quiet place, like a library or a cafe, and capturing the feeling of the space I’m in.  Often I find myself doodling people in public, wondering where they’re headed off to or what sorts of things stress them out. In my work, I like to explore how repeated motifs create form, theme, and feeling. My favorite mediums include pen, ink, and colored pencil.
+                    </p>
+                    <form action="/art" method="get">
+                      <button class="index-button btn-md btn-dark" type="submit" name="button">View My Work</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="carousel-item container-fluid">
+
+              <div class="row">
+                <div class="col-lg-12">
                   <a href="https://github.com/meganNelson03/Compiler/tree/master/Compiler_Project/Compiler-Nelson/src/parser"><h2 class="index-section-header">COMPILER PROJECT</h2></a>
                   <hr class="dot-hr">
                 </div>
               </div>
 
-              <div class="carousel-slide2-container">
+              <div class="carousel-compiler-container">
                 <div class="row">
                   <div class="col-lg-5 col-md-12 compiler-image">
                     <img src="./imgs/parseTree.png" alt="parse tree compiler">
@@ -224,7 +231,10 @@
                         for illegal arguments, type declaration, proper variable references, proper use of conditional statements, and other contextual code features.
                         Building a compiler creates a richer understanding of definite finite automatons, grammars, syntax trees, and code validation.
                       </p>
-                      Code: <a href="https://github.com/meganNelson03/Compiler/tree/master/Compiler_Project/Compiler-Nelson/src/parser"><i class="fas fa-code"></i></a>
+                      <!-- Code: <a href="https://github.com/meganNelson03/Compiler/tree/master/Compiler_Project/Compiler-Nelson/src/parser"><i class="fas fa-code"></i></a> -->
+                      <form action="https://github.com/meganNelson03/Compiler/tree/master/Compiler_Project/Compiler-Nelson/src/parser" method="post">
+                        <button class="index-button btn-md btn-dark" type="submit" name="button">View My Code</button>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -304,7 +314,7 @@
                     <div class="skill-bar">
                       <div class="bar-fill" style="width: 90%;">
                         <div class="skill">
-                          HTML5  
+                          HTML5
                         </div>
                       </div>
                     </div>

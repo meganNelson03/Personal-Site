@@ -10,6 +10,16 @@ $grid.imagesLoaded().progress(
   }
 )
 
+$(document).ready(function() {
+
+    $(".back-to-top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+
 
 $(".piece-image").on("click", function() {
   $(".modal").css("display", "block");

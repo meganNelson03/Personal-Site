@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-text h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .header-text h3 {
@@ -234,25 +234,43 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Carousel Styling */
 
-.carousel-slide1-container img {
-  width: 100%;
-  box-shadow: 5px 5px 5px 0px #1f1921;
+.carousel-inner {
+  height: 100vh;
 }
 
 .carousel-item .index-section-header {
   padding-top: 2%;
 }
 
-.carousel-item {
-  height: 725px;
-}
-
 .carousel-inner {
   padding-bottom: 5%;
 }
 
-.carousel-slide2-container {
+.carousel-art-container img {
+  width: 100%;
+  padding-left: 10%;
+}
+
+.carousel-art-description {
+  text-align: justify;
+  padding: 0 5%;
+}
+
+.carousel-art-description p {
+  line-height: 2;
+  padding-right: 10%;
+}
+
+.carousel-compiler-container {
   padding-left: 5%;
+}
+
+.carousel-item .index-button {
+  background-color: #342b38;
+}
+
+.carousel-item .index-button:hover {
+  background-color: #80bdab;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -262,16 +280,6 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-control-prev-icon, .carousel-control-next-icon {
   background-image: none;
   color: #ff9595;
-}
-
-.carousel-images {
-  padding: 0 2%;
-}
-
-/*  Art Work Section */
-
-.carousel-slide1-container img[src="./imgs/art/something.png"] {
-  height: 95%;
 }
 
 /*  Compiler Project Section */
@@ -359,7 +367,6 @@ h1, h2, h3, h4, h5, h6 {
 .resume-section:first-of-type {
   padding-right: 5%;
 }
-
 
 .resume-section-title {
   padding-bottom: 6%;
@@ -556,6 +563,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 15%;
   }
 
+  .carousel-art-container p {
+    line-height: 1.5;
+  }
+
   .social-section .container-fluid {
     padding-top: 15%;
   }
@@ -580,17 +591,21 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1%;
   }
 
-  .carousel-slide1-container {
-    width: 90%;
-    margin: 0 auto 5% auto;
+  .carousel-art-container p {
+    font-size: .85rem;
   }
 
-  .carousel-slide1-container:nth-of-type(3) {
-    display: none;
+  .carousel-art-container img {
+    padding: 5% 6%;
   }
 
   .portfolio-section .container-fluid {
     padding: 8% 5%;
+  }
+
+  .carousel-art-container img {
+    padding: 0 5%;
+    margin-bottom: 5%;
   }
 
   .resume-section-title {
@@ -617,6 +632,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991px) {
+
+  .carousel-art-container img {
+    padding: 5% 10%;
+  }
+
+  .carousel-art-container p {
+    text-align: left;
+    padding: 0 10%;
+  }
+
+  .carousel-art-container form {
+    text-align: center;
+  }
+
   .compiler-image img {
     display: none;
   }
@@ -634,10 +663,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
   }
 
-
-  .carousel-slide1-container:nth-of-type(3) {
-    display:none;
-  }
 
   .cv-section .work-date {
     text-align: left;
@@ -684,6 +709,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /******** PLATFORM RESPONSIVE **********/
 
+@media (min-width: 991px) and (max-width: 1213px) {
+
+  .carousel-art-container p {
+    font-size: .85rem;
+  }
+
+}
+
 @media (min-width: 641px) and (max-width: 990px) {
 
   .header-text .header-lead {
@@ -694,6 +727,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     padding-bottom: 2.5%;
   }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 991px) {
+
+  .article-card-1 , .article-card-2 {
+    margin-bottom: 10%;
+  }
+
 
 }
 
@@ -717,9 +760,12 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 481px) and (max-width: 640px)  {
   /* smartphones, iPhone, portrait 480x320 phones */
 
-  /**** HEADER *****/
   .header-text .header-lead {
       font-size: 1.5rem;
+  }
+
+  .social-section .fab {
+    font-size: 2.5rem;
   }
 
   .header-text .header-subtitle {
@@ -743,6 +789,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .header-text .header-lead {
     font-size: 1.18rem;
+  }
+
+  .social-section .fab {
+    font-size: 2rem;
+    margin-bottom: 2%;
   }
 
   .header-text .header-subtitle {
