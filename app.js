@@ -4,9 +4,9 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var MongoClient = require("mongodb").MongoClient;
+var redirectToHTTPS = require("express-http-to-https").redirectToHTTPS;
 var nodemailer = require("nodemailer");
 
-var redirectToHTTPS = require("express-http-to-https").redirectToHTTPS;
 
 var pieceData = require("./database.js");
 
@@ -26,7 +26,6 @@ const MONGODB_URI = process.env.MONGODB_URL /* || "mongodb://localhost:27017/per
 //   });
 //
 // });
-
 
 
 var app = express();
