@@ -633,6 +633,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
 
+  .about-me-container {
+    text-align: center;
+  }
+
   .carousel-art-container img {
     padding: 5% 10%;
   }
@@ -663,7 +667,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
   }
 
-
   .cv-section .work-date {
     text-align: left;
     padding: 0;
@@ -671,10 +674,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .cv-section p {
     font-size: .9rem;
-  }
-
-  .about-me-container {
-    text-align: center;
   }
 
   .article-card {
@@ -786,6 +785,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  /* iPhone 5 */
 
   .header-text .header-lead {
     font-size: 1.18rem;
