@@ -6,6 +6,8 @@ var mongoose = require("mongoose");
 var MongoClient = require("mongodb").MongoClient;
 var nodemailer = require("nodemailer");
 
+var redirectToHTTPS = require("express-http-to-https").redirectToHTTPS;
+
 var pieceData = require("./database.js");
 
 const PORT = process.env.PORT || 8087;
@@ -29,6 +31,7 @@ MongoClient.connect(MONGODB_URI, (err, client) => {
 
 var app = express();
 app.use(express.static(__dirname + "/public"));
+app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 mongoose.connect(MONGODB_URI, {useNewUrlParser: "true", useUnifiedTopology: true})
   .catch( error => console.log(error));
 app.use(bodyParser.urlencoded({extended: true}));
