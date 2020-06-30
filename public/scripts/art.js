@@ -4,11 +4,15 @@ var $grid = $('.grid').masonry({
   percentPosition: true
 });
 
-$grid.imagesLoaded().progress(
-  function() {
-    $grid.masonry("layout");
-  }
-)
+$(window).on("load", function() {
+  $grid.imagesLoaded().progress(
+    function() {
+      $grid.masonry("layout");
+    }
+  )
+})
+
+
 
 $(document).ready(function() {
 
