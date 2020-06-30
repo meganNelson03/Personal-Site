@@ -1,9 +1,11 @@
 var mongoose = require("mongoose");
 
-var pieceSchema = mongoose.Schema({
+var pieceSchema = new mongoose.Schema({
 	name: String,
 	image: String,
-	description: String
-});
+	description: String,
+	width: Number,
+	height: Number
+}, {collection: "artpieces"});
 
-module.exports = mongoose.model("Piece", pieceSchema);
+module.exports = mongoose.model("Piece", pieceSchema, "artpieces");

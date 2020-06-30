@@ -19,8 +19,9 @@ const MONGODB_URI = process.env.MONGODB_URL /* || "mongodb://localhost:27017/per
 //
 //   var db = client.db("heroku_26b6lmx6");
 //
-//   db.collection("pieces").insertMany(pieceData, (err, res) => {
+//   db.collection("artpieces").insertMany(pieceData, (err, res) => {
 //     if (err) throw err;
+//     console.log("inserted")
 //
 //     client.close();
 //   });
@@ -37,9 +38,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 var Piece = require("./models/pieces.js");
-var seedArtDatabase = require("./seed.js");
-
-seedArtDatabase();
+// var seedArtDatabase = require("./seed.js");
+//
+// seedArtDatabase();
 
 app.get("/", (req, res) => {
 
@@ -54,6 +55,7 @@ app.get("/art", (req, res) => {
 			console.log(err);
       res.render("index");
 		} else {
+      console.log(pieces);
 			res.render("art", {pieces: pieces});
 		}
   });
