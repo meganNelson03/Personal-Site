@@ -13,7 +13,6 @@ $(window).on("load", function() {
 })
 
 
-
 $(document).ready(function() {
 
     $(".back-to-top").click(function(event) {
