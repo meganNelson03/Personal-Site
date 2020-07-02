@@ -28,7 +28,6 @@ const MONGODB_URI = process.env.MONGODB_URL /* || "mongodb://localhost:27017/per
 //
 // });
 
-
 var app = express();
 app.use(express.static(__dirname + "/public"));
 app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
@@ -55,7 +54,6 @@ app.get("/art", (req, res) => {
 			console.log(err);
       res.render("index");
 		} else {
-      console.log(pieces);
 			res.render("art", {pieces: pieces});
 		}
   });
