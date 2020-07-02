@@ -71,23 +71,6 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-
-/**** HEADER SECTION ******/
-
-#header-title-container {
-  margin-top: -5%;
-
-}
-
-#header-title-container h1 div:first-of-type{
-  font-size: 11.5vw;
-  margin: 0;
-}
-
-#header-title-container h1 div:nth-of-type(2){
-  font-size: 7vw;
-}
-
 /***** ART SECTION *******/
 
 
@@ -144,9 +127,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #4d3d52;
   opacity: 1;
   margin: 0 auto;
-}
-
-.button-container {
 }
 
 .back-to-top {
@@ -219,14 +199,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /********* RESPONSIVE RESIZING *********/
 
-@media (min-width: 760px) and (max-width: 991px) {
-
-}
-
-@media (max-width: 759px) {
-
-}
-
 @media (min-width: 701px) and (max-width: 1000px) {
   .grid-item {
     width: 50%;
@@ -236,22 +208,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 760px) {
   .grid-item {
     width: 100%;
-  }
-
-  #header-title-container {
-    margin-top: 2.5%;
-  }
-
-  #header-title-container div {
-    display: inline;
-  }
-
-  #header-title-container h1 div:first-of-type{
-    font-size: 10vw;
-  }
-
-  #header-title-container h1 div:nth-of-type(2){
-    font-size: 10vw;
   }
 
   .art-section {

@@ -7,7 +7,6 @@ var MongoClient = require("mongodb").MongoClient;
 var redirectToHTTPS = require("express-http-to-https").redirectToHTTPS;
 var nodemailer = require("nodemailer");
 
-
 var pieceData = require("./database.js");
 
 const PORT = process.env.PORT || 8087;
@@ -37,9 +36,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 var Piece = require("./models/pieces.js");
-// var seedArtDatabase = require("./seed.js");
-//
-// seedArtDatabase();
 
 app.get("/", (req, res) => {
 
