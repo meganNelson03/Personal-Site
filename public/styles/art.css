@@ -218,3 +218,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 5%;
   }
 }
+
+@media (max-width: 414px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
