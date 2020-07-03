@@ -211,6 +211,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   text-align: center;
   padding: 4% 5%;
+  height: 100vh;
 }
 
 .portfolio-section a {
@@ -346,6 +347,7 @@ h1, h2, h3, h4, h5, h6 {
 .cv-header {
   text-align: center;
   padding-bottom: 4%;
+  margin-top: 10%;
 }
 
 .cv-section a {
@@ -814,5 +816,87 @@ h1, h2, h3, h4, h5, h6 {
     width: 70%;
     border: 3px solid #ff9595;
   }
+
+
+
+  .cv-section .dot-hr {
+    margin-top: 10%;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  .cv-section .index-section-header {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+}
+
+/* Tablets **/
+
+@media only screen
+and (min-device-width : 1024px)
+and (max-device-width : 1400px)
+and (orientation : portrait) {
+
+  .carousel-art-container {
+    margin-top: 10%;
+  }
+
+  .article-row {
+    margin-top: 7%;
+  }
+
+  .article-header {
+    font-size: .9rem;
+  }
+
+}
+
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+  .portfolio-section .container-fluid {
+    height: 60vh;
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+
+}
+
+@media only screen
+and (min-device-width: 1025px)
+and (max-device-width: 1400px)
+and (orientation : landscape) {
+
+  .portfolio-section .container-fluid {
+    height: 70vh;
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+
+}
+
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
+  .portfolio-section .container-fluid {
+    height: 100vh;
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+
 
 }
