@@ -108,7 +108,7 @@ var pieces = [
 	},
 	{
 		name: "Other Joyce",
-		image: "/joyce2.JPG",
+		image: "/joyce2.jpg",
 		description: "colored pencil",
 		width: "500px",
 		height: "500px"

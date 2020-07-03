@@ -21,11 +21,9 @@ h1, h2, h3, h4, h5, h6 {
     width:100%;
     height:100%;
     position:fixed;
-    z-index:9999;
+    z-index:98;
     background-color: #241d26;
 }
-
-
 
 
 @keyframes ldio-gacyj77vso {
@@ -69,6 +67,8 @@ h1, h2, h3, h4, h5, h6 {
 /**** NAVIGATION SECTION ****/
 
 #myNavbar {
+  position: relative;
+  z-index: 99;
   background-color: #241d26;
   padding-left: 1%;
   padding-right: 1%;

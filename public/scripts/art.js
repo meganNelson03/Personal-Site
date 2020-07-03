@@ -7,20 +7,12 @@ document.onreadystatechange = function() {
          $("#loading-element").remove();
          console.log("done");
        }, 3000)
-  } 
+  }
 }
 
-
-// $(document).ready(function() {
-//
-//   $("#loading-element").fadeOut(3000);
-//   setTimeout(function() {
-//     $("#loading-element").remove();
-//     console.log("done");
-//   }, 3000)
-//
-// })
-
+$("#loading-element").on("scroll", () => {
+  console.log("yeehaw");
+});
 
 
 var $grid = $('.grid').masonry({
