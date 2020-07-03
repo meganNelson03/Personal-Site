@@ -1,3 +1,28 @@
+document.onreadystatechange = function() {
+
+  var state = document.readyState;
+   if (state == "complete") {
+       $("#loading-element").fadeOut(3000);
+       setTimeout(function() {
+         $("#loading-element").remove();
+         console.log("done");
+       }, 3000)
+  } 
+}
+
+
+// $(document).ready(function() {
+//
+//   $("#loading-element").fadeOut(3000);
+//   setTimeout(function() {
+//     $("#loading-element").remove();
+//     console.log("done");
+//   }, 3000)
+//
+// })
+
+
+
 var $grid = $('.grid').masonry({
   itemSelector: '.grid-item',
   resize: true,
