@@ -824,9 +824,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 320px) and (max-width: 374px) {
+  /* For iPhone 5 */
   .cv-section .index-section-header {
     font-size: 1.2rem;
     padding: 0;
+  }
+
+  .header-text .header-lead {
+    font-size: 1rem;
+  }
+
+  .header-text .header-subtitle {
+    font-size: .6rem;
+    padding-bottom: 5%;
   }
 }
 

@@ -44,7 +44,14 @@ function generateAndPlaceItems(itemCount) {
 }
 
 function generateUniqueItem(count, color, radius) {
+
+  // make unique stars smaller for small screens
+  if (window.innerWidth < 500) {
+    radius = 3;
+  }
+
   for (var i = 0; i < count ; i++) {
+    console.log(radius);
     var uniqueItem = new Path.Star(new Point(Point.random() * view.size), radius, radius/2);
     uniqueItem.fillColor = color;
     uniqueItem.strokeColor = color;
