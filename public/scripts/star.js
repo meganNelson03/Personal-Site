@@ -8,7 +8,6 @@ window.onresize = function(event) {
   // Regenerate items every time screen size changes
   var numberItems = [Math.floor(window.innerWidth / 17), Math.floor(window.innerWidth / 170)];
 
-
   project.activeLayer.children = [];
   generateAndPlaceItems(numberItems[0]);
   generateUniqueItem(numberItems[1], "#80bdab", 15);
@@ -47,11 +46,11 @@ function generateUniqueItem(count, color, radius) {
 
   // make unique stars smaller for small screens
   if (window.innerWidth < 500) {
-    radius = 3;
+    radius = 5;
   }
 
   for (var i = 0; i < count ; i++) {
-    console.log(radius);
+
     var uniqueItem = new Path.Star(new Point(Point.random() * view.size), radius, radius/2);
     uniqueItem.fillColor = color;
     uniqueItem.strokeColor = color;
@@ -62,6 +61,12 @@ function moveItem(item, vector) {
 
   var posDifference = mousePosition - view.center;
   var speed = (posDifference * vector)/100;
+
+  if (speed.x == 0 & speed.y == 0) {
+    speed.x = .05;
+    speed.y = .05;
+  }
+
 
   item.bounds.x -= item.bounds.width * speed.x;
   item.bounds.y -= item.bounds.width * speed.y;

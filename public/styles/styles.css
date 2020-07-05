@@ -52,6 +52,64 @@ h1, h2, h3, h4, h5, h6 {
   color: #342b38;
 }
 
+/* Animations */
+
+.scale-up {
+  animation: scale-up-animation 2s forwards;
+}
+
+@keyframes scale-up-animation {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.slide-in-left {
+  animation: slide-in-left-animation 2s forwards;
+}
+
+@keyframes slide-in-left-animation {
+  from {
+    transform: translateX(-900px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.slide-in-right {
+  animation: slide-in-right-animation 2s forwards;
+}
+
+@keyframes slide-in-right-animation {
+  from {
+    transform: translateX(900px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.opacity-animate {
+  animation: opacity-animation 3s forwards;
+}
+
+@keyframes opacity-animation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /***** CANVAS SECTION *********/
 
 #myCanvas {
@@ -116,7 +174,6 @@ h1, h2, h3, h4, h5, h6 {
   height: calc(100vh);
 }
 
-
 .header {
   position: absolute;
   top: 50%;
@@ -157,12 +214,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+/* Header Animation */
+
+.header-animation {
+  animation: header-animate 2s forwards;
+}
+
+@keyframes header-animate {
+  from {
+    transform: scale(.75);
+  }
+
+  to {
+    transform: scale(1);
+  }
+
+}
+
 /* Header Button Animation */
 
 .header-move-icon {
-  animation-name: arrow-animation;
-  animation-duration: .5s;
-  animation-fill-mode: forwards;
+  animation-name: arrow-animation .5s forwards;
 }
 
 @keyframes arrow-animation {
@@ -180,6 +252,10 @@ h1, h2, h3, h4, h5, h6 {
 .about-section p {
   line-height: 2;
 }
+
+.about-section .index-section-header {
+}
+
 
 .profile-image-container {
   width: 100%;

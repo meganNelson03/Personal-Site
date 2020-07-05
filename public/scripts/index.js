@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  $(".header-text").toggleClass("header-animation");
+  $("#myCanvas").toggleClass("opacity-animation");
+
   $(".contact-form").submit(function(event) {
 
     event.preventDefault();
@@ -51,7 +54,24 @@ $(document).scroll(function() {
     $(".navbar").addClass("unscrolled-navbar");
   }
 
+   $('.about-section .index-section-header').toggleClass('slide-in-left', isVisible(".about-section .index-section-header"));
+   $('.compiler-header').toggleClass('scale-up', isVisible(".compiler-header"));
+   $('.compiler-description').toggleClass('slide-in-right', isVisible(".compiler-description"));
+   $('.compiler-image img').toggleClass('slide-in-left', isVisible(".compiler-description"));
+   $('.cv-header').toggleClass('slide-in-right', isVisible(".cv-header"));
+   $('.contact-me-text .index-section-header').toggleClass('scale-up', isVisible(".contact-me-text .index-section-header"));
+
+
+
 });
+
+function isVisible(descriptor) {
+  var top = $(window).scrollTop() + $(window).height();
+  if (top > $(`${descriptor}`).offset().top) {
+    return true;
+  }
+  return false;
+}
 
 $(".navbar-toggler").on("click", function() {
   var navCollapsed = $(".collapse").is(":hidden");
