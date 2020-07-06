@@ -550,25 +550,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-section form input[type="text"], form textarea {
-  background-color: #80bdab;
+  background-color: #1f1f1f;
   border: none;
   border-radius: 0;
-  color: #342b38;
+  color: white;
   font-size: 1.05rem;
   width: 100%;
   max-width: 500px;
   max-height: 200px;
   padding: 2%;
-  margin-bottom: 20px;
+  outline: 2px solid #6b6b6b;
+  margin-bottom: 10px;
 }
 
-.contact-section input:focus, .contact-section textarea:focus {
-  outline: 2px solid white;
+
+.contact-section form input[type="text"]:focus, .contact-section textarea:focus {
+  outline: 3px solid #80bdab;
 }
 
 ::placeholder {
-  color: #bbf1c8;
-  opacity: 1;
+  color: white;
+  opacity: .5;
+  font-size: .95rem;
 }
 
 .contact-section p {

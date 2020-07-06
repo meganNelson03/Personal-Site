@@ -44,7 +44,6 @@ function checkEmail(email) {
   return emailRegEx.test(email);
 }
 
-
 $(document).scroll(function() {
 
   $(".navbar").addClass("scrolled-navbar");
