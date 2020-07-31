@@ -68,6 +68,13 @@ var pieces = [
 		height: "500px"
 	},
 	{
+		name: "mountains",
+		image: "/mountains.jpg",
+		description: "colored pencil",
+		width: "500px",
+		height: "500px"
+	},
+	{
 		name: "twizel couch",
 		image: "/pencilcouch.jpg",
 		description: "colored pencil",
