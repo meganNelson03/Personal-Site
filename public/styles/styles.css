@@ -326,6 +326,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5%;
 }
 
+.carousel-img img {
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+
 .carousel-art-container img {
   width: 100%;
   padding-left: 10%;
