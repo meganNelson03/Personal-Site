@@ -16,6 +16,6 @@
     "express-http-to-https": "^1.1.4",
     "mongodb": "^3.5.9",
     "mongoose": "^5.9.21",
-    "nodemailer": "^6.4.8"
+    "nodemailer": "^6.4.16"
   }
 }
